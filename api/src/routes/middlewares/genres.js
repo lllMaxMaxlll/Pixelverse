@@ -1,10 +1,14 @@
 const { Router } = require("express");
+const { getGenres } = require("../controllers/genresControllers");
 const router = Router();
 
-router.get("/", (req, res) => {
-	// Obtener todos los tipos de géneros de videojuegos posibles
-	// En una primera instancia deberán traerlos desde rawg y guardarlos en su propia base de datos y luego ya utilizarlos desde allí
-	res.send("Devuelve los genres");
+router.get("/", async (req, res) => {
+	try {
+		const allGenres = await getGenres();
+		res.status(200).json(allGenres);
+	} catch (error) {
+		res.status(404).json({ error: error.message });
+	}
 });
 
 module.exports = router;

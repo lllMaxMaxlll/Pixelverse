@@ -2,6 +2,8 @@ const { Genre } = require("../../db");
 const getApiGenres = require("./getGenresFN");
 
 const getGenres = async () => {
+	// const exits = await Genre.findAll();
+
 	// All genres from API
 	const apiGenres = await getApiGenres();
 	// Add to DB
