@@ -1,8 +1,9 @@
+// CREA ESTE MODELO Y VINCULALO CON LOS GAMES Y GENRES
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
 	sequelize.define(
-		"genre",
+		"platform",
 		{
 			id: {
 				type: DataTypes.UUID,
