@@ -1,6 +1,6 @@
 require("dotenv").config();
 const axios = require("axios");
-const { Videogame } = require("../../db");
+const { Videogame, Genre, Platform } = require("../../db");
 const { Op } = require("sequelize");
 const { URL, API_KEY } = process.env;
 const { mapGames, get100Games } = require("./getGamesFN");
@@ -25,7 +25,24 @@ const gamesByName = async (name) => {
 // Games from Database and API
 const getAllGames = async () => {
 	// Get all games from Database
-	const dbGames = await Videogame.findAll();
+	const dbGames = await Videogame.findAll({
+		include: [
+			{
+				model: Genre,
+				attr: ["name"],
+				through: {
+					attr: [],
+				},
+			},
+			{
+				model: Platform,
+				attr: ["name"],
+				through: {
+					attr: [],
+				},
+			},
+		],
+	});
 
 	// Get first 100 games from API
 	let apiGames = await get100Games();

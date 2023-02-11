@@ -6,7 +6,7 @@ router.get("/:id", async (req, res) => {
 	const { id } = req.params;
 	try {
 		const game = isNaN(id) ? await findID_DB(id) : await findID_API(id);
-		res.status(201).json(game);
+		res.status(200).json(game);
 	} catch (error) {
 		res.status(404).json({ error: error.message });
 	}

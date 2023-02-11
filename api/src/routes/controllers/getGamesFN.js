@@ -14,8 +14,8 @@ const get100Games = async () => {
 };
 
 // Create new Array with results of API and DB games
-const mapGames = async (apiGames) => {
-	const results = await apiGames.map((G) => {
+const cleanDataGames = async (apiGames) => {
+	return await apiGames.map((G) => {
 		return {
 			id: G.id,
 			name: G.name,
@@ -27,8 +27,20 @@ const mapGames = async (apiGames) => {
 			created: false,
 		};
 	});
-
-	return results;
 };
 
-module.exports = { mapGames, get100Games };
+// Clean data of unique game
+const cleanGame = (game) => {
+	return {
+		id: game.id,
+		name: game.name,
+		background_image: game.background_image,
+		released: game.released,
+		rating: game.rating,
+		platforms: game.platforms.map((e) => e.platform.name),
+		genres: game.genres.map((e) => e.name),
+		created: false,
+	};
+};
+
+module.exports = { mapGames: cleanDataGames, get100Games, cleanGame };
