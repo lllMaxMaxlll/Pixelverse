@@ -23,6 +23,7 @@ const mapGames = async (apiGames) => {
 			released: G.released,
 			rating: G.rating,
 			platforms: G.platforms.map((e) => e.platform.name),
+			genres: G.genres.map((e) => e.name),
 			created: false,
 		};
 	});
