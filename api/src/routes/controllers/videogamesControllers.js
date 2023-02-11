@@ -12,13 +12,12 @@ const gamesByName = async (name) => {
 	// Get all games from API by name
 	const apiGames = await axios.get(`${URL}/games?key=${API_KEY}&search=${name}`);
 	// Mapping api games
-	const games = mapGames(apiGames.data.results);
-
-	// If no results
-	if (!games.length) throw Error("Games not found");
+	const games = await mapGames(apiGames.data.results);
 
 	// Only 15 results
-	const allGames = dbGames.concat(games).slice(0, 15);
+	const allGames = [...dbGames, ...games].slice(0, 15);
+	// If no results
+	if (!allGames.length) throw Error("Games not found");
 
 	return allGames;
 };
