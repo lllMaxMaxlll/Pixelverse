@@ -29,16 +29,16 @@ const getAllGames = async () => {
 		include: [
 			{
 				model: Genre,
-				attr: ["name"],
+				attributes: ["id", "name"],
 				through: {
-					attr: [],
+					attributes: [],
 				},
 			},
 			{
 				model: Platform,
-				attr: ["name"],
+				attributes: ["id", "name"],
 				through: {
-					attr: [],
+					attributes: [],
 				},
 			},
 		],

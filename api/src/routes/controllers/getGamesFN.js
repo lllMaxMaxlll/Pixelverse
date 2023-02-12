@@ -14,16 +14,26 @@ const get100Games = async () => {
 };
 
 // Create new Array with results of API and DB games
-const cleanDataGames = async (apiGames) => {
-	return await apiGames.map((G) => {
+const cleanDataGames = (apiGames) => {
+	return apiGames.map((G) => {
 		return {
 			id: G.id,
 			name: G.name,
 			background_image: G.background_image,
 			released: G.released,
 			rating: G.rating,
-			platforms: G.platforms.map((e) => e.platform.name),
-			genres: G.genres.map((e) => e.name),
+			platforms: G.platforms.map((e) => {
+				return {
+					id: e.platform.id,
+					name: e.platform.name,
+				};
+			}),
+			genres: G.genres.map((e) => {
+				return {
+					id: e.id,
+					name: e.name,
+				};
+			}),
 			created: false,
 		};
 	});
@@ -37,8 +47,18 @@ const cleanGame = (game) => {
 		background_image: game.background_image,
 		released: game.released,
 		rating: game.rating,
-		platforms: game.platforms.map((e) => e.platform.name),
-		genres: game.genres.map((e) => e.name),
+		platforms: game.platforms.map((e) => {
+			return {
+				id: e.platform.id,
+				name: e.platform.name,
+			};
+		}),
+		genres: game.genres.map((e) => {
+			return {
+				id: e.id,
+				name: e.name,
+			};
+		}),
 		created: false,
 	};
 };

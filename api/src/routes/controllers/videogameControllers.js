@@ -10,14 +10,14 @@ const findID_DB = async (id) => {
 		include: [
 			{
 				model: Genre,
-				attributes: ["name"],
+				attributes: ["id", "name"],
 				through: {
 					attributes: [],
 				},
 			},
 			{
 				model: Platform,
-				attributes: ["name"],
+				attributes: ["id", "name"],
 				through: {
 					attributes: [],
 				},
@@ -25,6 +25,7 @@ const findID_DB = async (id) => {
 		],
 	});
 	if (!game) throw Error("Game not found in Database");
+
 	return game;
 };
 
