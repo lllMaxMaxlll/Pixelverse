@@ -1,4 +1,3 @@
-// CREA ESTE MODELO Y VINCULALO CON LOS GAMES Y GENRES
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
