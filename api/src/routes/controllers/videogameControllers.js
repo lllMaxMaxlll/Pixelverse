@@ -24,6 +24,7 @@ const findID_DB = async (id) => {
 			},
 		],
 	});
+
 	if (!game) throw Error("Game not found in Database");
 
 	return game;

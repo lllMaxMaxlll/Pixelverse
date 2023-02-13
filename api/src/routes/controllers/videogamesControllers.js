@@ -11,13 +11,14 @@ const gamesByName = async (name) => {
 	const dbGames = await Videogame.findAll({ where: { name: { [Op.iLike]: `%${name}%` } } });
 	// Get all games from API by name
 	const apiGames = await axios.get(`${URL}/games?key=${API_KEY}&search=${name}`);
-	// Mapping api games
+	// Mapping API games
 	const games = await mapGames(apiGames.data.results);
+
+	// If no results
+	if (!allGames.length) throw Error("Games not found");
 
 	// Only 15 results
 	const allGames = [...dbGames, ...games].slice(0, 15);
-	// If no results
-	if (!allGames.length) throw Error("Games not found");
 
 	return allGames;
 };

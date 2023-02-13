@@ -39,7 +39,7 @@ const cleanDataGames = (apiGames) => {
 	});
 };
 
-// Clean data of unique game
+// Clean data of unique game from API
 const cleanGame = (game) => {
 	return {
 		id: game.id,

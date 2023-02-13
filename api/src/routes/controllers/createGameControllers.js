@@ -6,6 +6,9 @@ const createGame = async (name, description, image, released, rating, platforms,
 	if (!name && !description && !platforms) {
 		throw Error("Missing required data");
 	}
+	// Check if platforms and genres is array
+	if (!Array.isArray(genres)) throw Error("Genres must to be a array of genres");
+	if (!Array.isArray(platforms)) throw Error("Platfoms must to be a array of platforms");
 
 	// Search in DB if videogame is already created
 	const gameAlreadyCreated = await Videogame.findOne({ where: { name } });
@@ -14,20 +17,19 @@ const createGame = async (name, description, image, released, rating, platforms,
 	// Creating new game in DB
 	const newGame = await Videogame.create({ name, description, image, released, rating });
 
-	const newGenre = await Genre.bulkCreate(
-		genres.map((G) => ({
-			name: G,
-		}))
-	);
+	// Create or find all genres from array and add to Game
+	genres.forEach(async (e) => {
+		let newGenre = await Genre.findOne({ where: { name: e } });
+		if (!newGenre) newGenre = await Genre.create({ name: e });
+		await newGame.addGenre(newGenre);
+	});
 
-	const newPlatform = await Platform.bulkCreate(
-		platforms.map((G) => ({
-			name: G,
-		}))
-	);
-
-	await newGame.setGenres(newGenre);
-	await newGame.setPlatforms(newPlatform);
+	// Same with platforms
+	platforms.forEach(async (e) => {
+		let newPlatform = await Platform.findOne({ where: { name: e } });
+		if (!newPlatform) newPlatform = await Platform.create({ name: e });
+		await newGame.addPlatform(newPlatform);
+	});
 };
 
 module.exports = { createGame };
