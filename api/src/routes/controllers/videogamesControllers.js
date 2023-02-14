@@ -3,7 +3,7 @@ const axios = require("axios");
 const { Videogame, Genre, Platform } = require("../../db");
 const { Op } = require("sequelize");
 const { URL, API_KEY } = process.env;
-const { mapGames, get100Games } = require("./getGamesFN");
+const { cleanDataGames, get100Games } = require("./getGamesFN");
 
 // Games from Database and API by name
 const gamesByName = async (name) => {
@@ -12,14 +12,13 @@ const gamesByName = async (name) => {
 	// Get all games from API by name
 	const apiGames = await axios.get(`${URL}/games?key=${API_KEY}&search=${name}`);
 	// Mapping API games
-	const games = await mapGames(apiGames.data.results);
-
-	// If no results
-	if (!allGames.length) throw Error("Games not found");
+	const games = await cleanDataGames(apiGames.data.results);
 
 	// Only 15 results
 	const allGames = [...dbGames, ...games].slice(0, 15);
 
+	// If no results
+	if (!allGames.length) throw Error("Games not found");
 	return allGames;
 };
 
@@ -35,13 +34,6 @@ const getAllGames = async () => {
 					attributes: [],
 				},
 			},
-			{
-				model: Platform,
-				attributes: ["id", "name"],
-				through: {
-					attributes: [],
-				},
-			},
 		],
 	});
 
@@ -49,7 +41,7 @@ const getAllGames = async () => {
 	let apiGames = await get100Games();
 
 	// Creating new array with games
-	const games = await mapGames(apiGames);
+	const games = await cleanDataGames(apiGames);
 
 	const allGames = dbGames.concat(games);
 

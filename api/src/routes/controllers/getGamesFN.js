@@ -6,7 +6,7 @@ const get100Games = async () => {
 	let api = await axios.get(`${URL}/games?key=${API_KEY}`);
 	let games = [];
 	for (let i = 0; i < 5; i++) {
-		await games.push(...api.data.results);
+		games.push(...api.data.results);
 		api = await axios.get(api.data.next);
 		i++;
 	}
@@ -14,20 +14,22 @@ const get100Games = async () => {
 };
 
 // Create new Array with results of API and DB games
+
+// Cleaning info to show in all videogames cards
 const cleanDataGames = (apiGames) => {
 	return apiGames.map((G) => {
 		return {
 			id: G.id,
 			name: G.name,
 			background_image: G.background_image,
-			released: G.released,
+			// released: G.released,
 			rating: G.rating,
-			platforms: G.platforms.map((e) => {
-				return {
-					id: e.platform.id,
-					name: e.platform.name,
-				};
-			}),
+			// platforms: G.platforms.map((e) => {
+			// 	return {
+			// 		id: e.platform.id,
+			// 		name: e.platform.name,
+			// 	};
+			// }),
 			genres: G.genres.map((e) => {
 				return {
 					id: e.id,
@@ -47,6 +49,7 @@ const cleanGame = (game) => {
 		background_image: game.background_image,
 		released: game.released,
 		rating: game.rating,
+		description: game.description,
 		platforms: game.platforms.map((e) => {
 			return {
 				id: e.platform.id,
@@ -63,4 +66,4 @@ const cleanGame = (game) => {
 	};
 };
 
-module.exports = { mapGames: cleanDataGames, get100Games, cleanGame };
+module.exports = { cleanDataGames, get100Games, cleanGame };
