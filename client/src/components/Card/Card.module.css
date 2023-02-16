@@ -1,0 +1,46 @@
+.card {
+	position: relative;
+	width: 250px;
+	height: 290px;
+	margin: 1rem;
+	box-shadow: 0px 2px 5px rgba(35, 35, 35, 0.3);
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+	border: solid #f1faee 5px;
+	border-radius: 10px;
+	background-color: #f1faee;
+}
+
+.cardImg {
+	top: 0px;
+	width: 100%;
+}
+
+.cardInfo {
+	width: 100%;
+	background-color: #f1faee;
+	bottom: -43px;
+	text-align: center;
+}
+
+.cardInfo > h2 {
+	margin: 0 auto;
+}
+
+.title {
+	margin: 0 auto;
+	font-size: 1.4em;
+	font-weight: 400;
+}
+
+.subtitle {
+	position: relative;
+	top: 0px;
+}
+
+.subtitle > h2 {
+	display: block;
+	margin: 0 5px;
+	font-size: 1rem;
+	font-weight: 300;
+}

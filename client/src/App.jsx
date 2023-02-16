@@ -1,21 +1,17 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import Videogames from "./components/Videogames";
-import Detail from "./components/Detail";
-import Landing from "./components/Landing";
-import CreateVideogame from "./components/CreateVideogame";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { Home, Landing, Detail, CreateVideogame } from "./views";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
 	return (
 		<div className='App'>
-			{/* <NavBar />
-        Que se renderice cuando no este en landing
-      */}
+			{useLocation().pathname !== "/" && <Navbar />}
 			<Routes>
 				<Route exact path='/' element={<Landing />}></Route>
-				<Route path='/videogames' element={<Videogames />}></Route>
-				<Route path='/videogame/:id' element={<Detail />}></Route>
-				<Route path='/videogame/create' element={<CreateVideogame />}></Route>
+				<Route path='/home' element={<Home />}></Route>
+				<Route path='/detail/:id' element={<Detail />}></Route>
+				<Route path='/create' element={<CreateVideogame />}></Route>
 				{/* <Route path='/favorites' element={<Favorites />}></Route> */}
 			</Routes>
 		</div>
