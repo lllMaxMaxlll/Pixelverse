@@ -1,7 +1,7 @@
-import { GET_VIDEOGAMES, GET_GENRES } from "./actions";
+import { GET_VIDEOGAMES, GET_GENRES, GET_DETAIL } from "./actions";
 
 const initialState = {
-	// Usar esta copia para el filtrado/orden
+	// Use videogames array for filter/sorted
 	videogames: [],
 	allVideogames: [],
 	allGenres: [],
@@ -16,11 +16,17 @@ const rootReducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				allVideogames: payload,
+				videogames: payload,
 			};
 		case GET_GENRES:
 			return {
 				...state,
 				allGenres: payload,
+			};
+		case GET_DETAIL:
+			return {
+				...state,
+				videogameDetail: payload,
 			};
 		default:
 			return state;
