@@ -1,12 +1,11 @@
 .card {
 	position: relative;
 	width: 250px;
-	height: 290px;
+	height: 300px;
 	margin: 1rem;
-	box-shadow: 0px 2px 5px rgba(35, 35, 35, 0.3);
 	transition: all 0.3s ease-in-out;
 	overflow: hidden;
-	border: solid #f1faee 5px;
+	border: solid #000000 5px;
 	border-radius: 10px;
 	background-color: #f1faee;
 }

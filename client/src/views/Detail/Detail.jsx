@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { getDetail } from "../../redux/actions";
+import style from "./Detail.module.css";
 
 const Detail = () => {
 	const { id } = useParams();
+	const dispatch = useDispatch();
+	// Get info from store
+	const videogame = useSelector((state) => state.videogameDetail);
+
+	useEffect(() => {
+		dispatch(getDetail(id));
+	}, [id]);
+
 	return (
-		<div>
-			<h1>Detail del ID {id}</h1>
-			<h2>Mostrarias detalles del videojuego buscado por ID</h2>
-			<p>
-				<li>Imagen</li>
-				<li>Name</li>
-				<li>Description</li>
-				<li>Released</li>
-				<li>Rating</li>
-				<li>Platforms</li>
-			</p>
+		<div className={style.container}>
+			<h1>Detail from ID {id}</h1>
+			<img src={videogame.background_image} />
+			<p>{videogame.name}</p>
+			<p dangerouslySetInnerHTML={{ __html: videogame.description }} />
+			<p>{videogame.released}</p>
+			<p>{videogame.rating}</p>
+			<p>{videogame.genres}</p>
+			<p>{videogame.platforms}</p>
 		</div>
 	);
 };
