@@ -4,7 +4,6 @@ import Loader from "../../components/Loader/Loader";
 
 const Home = () => {
 	const loading = useSelector((state) => state.isLoading);
-
 	return <div>{loading ? <Loader /> : <Videogames />}</div>;
 };
 

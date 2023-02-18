@@ -5,6 +5,7 @@ export const GET_GENRES = "GET_GENRES";
 export const GET_DETAIL = "GET_DETAIL";
 export const LOAD_DONE = "LOAD_DONE";
 export const LOAD_WAIT = "LOAD_WAIT";
+export const CLEAN_ID = "CLEAN_ID";
 
 // export const GET_PLATFORMS = "GET_PLATFORMS";
 
@@ -38,6 +39,20 @@ export const getDetail = (id) => {
 	};
 };
 
-export const loading = () => dispatch({ type: LOAD_WAIT });
+export const loading = () => {
+	return (dispatch) => {
+		dispatch({ type: LOAD_WAIT, payload: false });
+	};
+};
 
-export const loadDone = () => dispatch({ type: LOAD_DONE });
+export const loadDone = () => {
+	return (dispatch) => {
+		return dispatch({ type: LOAD_DONE, payload: true });
+	};
+};
+
+export const cleanID = () => {
+	return (dispatch) => {
+		return dispatch({ type: CLEAN_ID, payload: true });
+	};
+};

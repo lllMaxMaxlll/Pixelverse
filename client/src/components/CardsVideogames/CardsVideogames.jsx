@@ -5,6 +5,9 @@ import style from "./CardsVideogames.module.css";
 const Videogames = () => {
 	// Get games from store redux
 	const videogames = useSelector((state) => state.allVideogames);
+
+	console.log(videogames);
+
 	const allVideogames = videogames.map((game) => {
 		return (
 			<Card
