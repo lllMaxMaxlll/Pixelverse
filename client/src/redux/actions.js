@@ -3,6 +3,9 @@ import axios from "axios";
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES";
 export const GET_GENRES = "GET_GENRES";
 export const GET_DETAIL = "GET_DETAIL";
+export const LOAD_DONE = "LOAD_DONE";
+export const LOAD_WAIT = "LOAD_WAIT";
+
 // export const GET_PLATFORMS = "GET_PLATFORMS";
 
 // Save videogames from API to store
@@ -34,3 +37,7 @@ export const getDetail = (id) => {
 		dispatch({ type: GET_DETAIL, payload: videogame });
 	};
 };
+
+export const loading = () => dispatch({ type: LOAD_WAIT });
+
+export const loadDone = () => dispatch({ type: LOAD_DONE });

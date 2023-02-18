@@ -1,4 +1,4 @@
-import { GET_VIDEOGAMES, GET_GENRES, GET_DETAIL } from "./actions";
+import { GET_VIDEOGAMES, GET_GENRES, GET_DETAIL, LOAD_DONE, LOAD_WAIT } from "./actions";
 
 const initialState = {
 	// Use videogames array for filter/sorted
@@ -6,6 +6,7 @@ const initialState = {
 	allVideogames: [],
 	allGenres: [],
 	videogameDetail: [],
+	isLoading: true,
 	// allPlatforms: [],
 	// myFavorites: [],
 };
@@ -27,6 +28,16 @@ const rootReducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				videogameDetail: payload,
+			};
+		case LOAD_WAIT:
+			return {
+				...state,
+				isLoading: true,
+			};
+		case LOAD_DONE:
+			return {
+				...state,
+				isLoading: false,
 			};
 		default:
 			return state;
