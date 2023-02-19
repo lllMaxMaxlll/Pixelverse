@@ -9,6 +9,7 @@ const Detail = () => {
 	const { id } = useParams();
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+	// loading local state for render detail or loader
 	const [loading, setLoading] = useState(true);
 
 	// Get info from store

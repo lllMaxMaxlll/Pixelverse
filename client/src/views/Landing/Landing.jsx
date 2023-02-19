@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { getVideogames, loadDone } from "../../redux/actions";
+import style from "./Landing.module.css";
 
 const Landing = () => {
 	const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Landing = () => {
 	}, []);
 
 	return (
-		<div>
+		<div className={style.container}>
 			<h1>Videogames App</h1>
 			<h1>Landing Page</h1>
 			<div>
