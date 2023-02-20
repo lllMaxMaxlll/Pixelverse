@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const URL = "http://localhost:3001";
+
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES";
 export const GET_GENRES = "GET_GENRES";
 export const GET_DETAIL = "GET_DETAIL";
@@ -11,18 +13,24 @@ export const ORDER_NAME = "ORDER_NAME";
 // export const GET_PLATFORMS = "GET_PLATFORMS";
 
 // Save videogames from API to store
-export const getVideogames = () => {
+export const getVideogames = (name) => {
 	return async (dispatch) => {
-		const apiData = await axios.get("http://localhost:3001/videogames");
-		const videogames = apiData.data;
-		dispatch({ type: GET_VIDEOGAMES, payload: videogames });
+		// If have name to search
+		if (name) {
+			const apiDataName = await axios.get(`${URL}/videogames?name=${name}`);
+			dispatch({ type: GET_VIDEOGAMES, payload: apiDataName.data });
+			return;
+		}
+		// If no name, get all
+		const apiData = await axios.get(`${URL}/videogames`);
+		dispatch({ type: GET_VIDEOGAMES, payload: apiData.data });
 	};
 };
 
 // Save genres from API to store
 export const getGenres = () => {
 	return async (dispatch) => {
-		const apiData = await axios.get("http://localhost:3001/genres");
+		const apiData = await axios.get(`${URL}/genres`);
 		const genres = apiData.data;
 		dispatch({ type: GET_GENRES, payload: genres });
 	};
@@ -31,7 +39,7 @@ export const getGenres = () => {
 // Save videogame for ID from API to store
 export const getDetail = (id) => {
 	return async (dispatch) => {
-		const apiData = await axios.get(`http://localhost:3001/videogame/${id}`);
+		const apiData = await axios.get(`${URL}/videogame/${id}`);
 		const videogame = apiData.data;
 		// Convert array to string
 		videogame.genres = videogame.genres.map((g) => g.name).join(" - ");

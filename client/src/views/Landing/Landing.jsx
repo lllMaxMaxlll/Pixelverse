@@ -14,7 +14,7 @@ const Landing = () => {
 	useEffect(() => {
 		dispatch(getVideogames()).then(() => dispatch(loadDone()));
 		dispatch(getGenres());
-	}, [videogames]);
+	}, []);
 
 	return (
 		<div className={style.container}>
