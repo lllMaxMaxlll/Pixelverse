@@ -50,23 +50,17 @@ export const getDetail = (id) => {
 
 // When is loading
 export const loading = () => {
-	return (dispatch) => {
-		dispatch({ type: LOAD_WAIT, payload: false });
-	};
+	return { type: LOAD_WAIT, payload: false };
 };
 
 // When load is done
 export const loadDone = () => {
-	return (dispatch) => {
-		return dispatch({ type: LOAD_DONE, payload: true });
-	};
+	return { type: LOAD_DONE, payload: true };
 };
 
 // For unmount Detail ID
 export const cleanID = () => {
-	return (dispatch) => {
-		return dispatch({ type: CLEAN_ID, payload: true });
-	};
+	return { type: CLEAN_ID, payload: true };
 };
 
 // To order videogames to genres

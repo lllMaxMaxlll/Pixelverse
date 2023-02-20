@@ -12,10 +12,7 @@ const SearchBar = () => {
 
 	const handleSearch = (text) => {
 		// Dispatch con el text para buscarlo en la api
-		console.log(text);
-		console.log(dispatch);
-		dispatch(getVideogames(text));
-		dispatch(orderName("asc"));
+		dispatch(getVideogames(text)).then((_) => dispatch(orderName("asc")));
 	};
 
 	return (
