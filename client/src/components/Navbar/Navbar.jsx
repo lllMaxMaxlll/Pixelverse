@@ -1,9 +1,36 @@
 import style from "./Navbar.module.css";
+import { NavLink } from "react-router-dom";
 
-const Navbar = (props) => {
+const Navbar = () => {
 	return (
 		<div className={style.nav}>
-			<h3>Soy la navbar</h3>
+			<NavLink to={"/home"} className={style.svglogo}>
+				<h3>Soy la navbar</h3>
+			</NavLink>
+			<div className={style.buttons}>
+				<div>
+					<NavLink to={"/home"}>
+						<button className={location.pathname === "/home" ? style.active : style.button}>
+							Home
+						</button>
+					</NavLink>
+					<NavLink to={"/create"}>
+						<button className={location.pathname === "/create" ? style.active : style.button}>
+							Create
+						</button>
+					</NavLink>
+					{/* <NavLink to={"/favorites"}>
+						<button
+							className={
+								location.pathname === "/favorites"
+									? style.active
+									: style.button
+							}>
+							Favorites
+						</button>
+					</NavLink> */}
+				</div>
+			</div>
 		</div>
 	);
 };

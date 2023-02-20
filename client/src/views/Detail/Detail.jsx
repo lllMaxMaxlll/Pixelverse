@@ -29,9 +29,8 @@ const Detail = () => {
 				<Loader />
 			) : (
 				<div className={style.container}>
-					<h1>Detail from ID {id}</h1>
+					<h1>{game.name}</h1>
 					<img src={game.background_image} alt={game.name} />
-					<h2>{game.name}</h2>
 					<p dangerouslySetInnerHTML={{ __html: game.description }} />
 					<p>{game.released}</p>
 					<p>{game.rating}</p>

@@ -41,7 +41,7 @@ const Pagination = ({ videogames }) => {
 
 	return (
 		<div className={style.container}>
-			<div>{getPageNumbers(totalPages, currentPage)}</div>
+			<div className={style.buttonPag}>{getPageNumbers(totalPages, currentPage)}</div>
 			<div className={style.cardsContainer}>{currentVideogames}</div>
 		</div>
 	);

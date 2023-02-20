@@ -1,4 +1,13 @@
-import { GET_VIDEOGAMES, GET_GENRES, GET_DETAIL, LOAD_DONE, LOAD_WAIT, CLEAN_ID } from "./actions";
+import {
+	GET_VIDEOGAMES,
+	GET_GENRES,
+	GET_DETAIL,
+	LOAD_DONE,
+	LOAD_WAIT,
+	CLEAN_ID,
+	ORDER_GENRE,
+	ORDER_NAME,
+} from "./actions";
 
 const initialState = {
 	// Use videogames array for filter/sorted
@@ -43,6 +52,38 @@ const rootReducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				isLoading: false,
+			};
+
+		case ORDER_GENRE:
+			let filteredVideogames =
+				payload === "All"
+					? [...state.videogames]
+					: [...state.videogames].filter((game) =>
+							game.genres.map((g) => g.name).includes(payload)
+					  );
+			return {
+				...state,
+				allVideogames: filteredVideogames,
+			};
+
+		case ORDER_NAME:
+			let ordered = [...state.allVideogames];
+			if (payload === "asc") {
+				ordered.sort((a, b) => {
+					if (a.name > b.name) return 1;
+					if (a.name < b.name) return -1;
+					return 0;
+				});
+			} else {
+				ordered.sort((a, b) => {
+					if (a.name < b.name) return 1;
+					if (a.name > b.name) return -1;
+					return 0;
+				});
+			}
+			return {
+				...state,
+				allVideogames: ordered,
 			};
 		default:
 			return state;
