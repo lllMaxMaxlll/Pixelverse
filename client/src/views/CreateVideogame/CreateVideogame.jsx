@@ -1,14 +1,28 @@
 import React, { useState } from "react";
-import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
 import style from "./CreateVideogame.module.css";
+import Select from "react-select";
+
 const CreateVideogame = () => {
-	const [newGame, setNewGame] = useState({
+	const dispatch = useDispatch();
+	const genres = useSelector((state) => state.allGenres);
+	const platforms = useSelector((state) => state.allPlatforms);
+
+	const [newVideogame, setNewVideogame] = useState({
 		name: "",
 		description: "",
 		imageURL: "",
 		released: "",
 		genres: [],
 		platforms: [],
+	});
+
+	const genresOptions = genres.map((g) => {
+		return { value: g.name, label: g.name };
+	});
+
+	const platformsOptions = platforms.map((p) => {
+		return { value: p.name, label: p.name };
 	});
 
 	const [errors, setErrors] = useState({
@@ -23,19 +37,31 @@ const CreateVideogame = () => {
 	const handleChange = (event) => {
 		const property = event.target.name;
 		const value = event.target.value;
+
+		console.log(event);
+
 		// Validate value of input
-		validate({ ...newGame, [property]: value });
+		validate({ ...newVideogame, [property]: value });
 		// Set input to state
-		setNewGame({ ...newGame, [property]: value });
+		setNewVideogame({ ...newVideogame, [property]: value });
+	};
+
+	const handleGenres = (event) => {
+		let selected = event.map((e) => e.value);
+		setNewVideogame({ ...newVideogame, genres: selected });
+	};
+
+	const handlePlatforms = (event) => {
+		let selected = event.map((e) => e.value);
+		setNewVideogame({ ...newVideogame, platforms: selected });
 	};
 
 	const submitHandler = (event) => {
+		// Prevent a browser reload/refresh
 		event.preventDefault();
+		console.log(newVideogame);
 		// En el submit hacemos el post a la url local, y el segundo argumento es el objeto a mandar
-		const response = axios
-			.post("URL", newGame)
-			.then((res) => console.log(res))
-			.catch((err) => console.log(err));
+		dispatch(postVideogame(newVideogame));
 	};
 
 	const validate = (newGame) => {
@@ -50,17 +76,34 @@ const CreateVideogame = () => {
 			<h1>CreateVideogame</h1>
 			<form onSubmit={submitHandler}>
 				<label>Name:</label>
-				<input type='text' onChange={handleChange} name='name' value={newGame.name} />
+				<input type='text' onChange={handleChange} name='name' value={newVideogame.name} />
 				<label>Description:</label>
-				<input type='text' onChange={handleChange} name='description' value={newGame.description} />
+				<input
+					type='text'
+					onChange={handleChange}
+					name='description'
+					value={newVideogame.description}
+				/>
 				<label>Image URL:</label>
-				<input type='url' onChange={handleChange} name='imageURL' value={newGame.imageURL} />
+				<input type='url' onChange={handleChange} name='imageURL' value={newVideogame.imageURL} />
 				<label>Released date:</label>
-				<input type='date' onChange={handleChange} name='released' value={newGame.released} />
+				<input type='date' onChange={handleChange} name='released' value={newVideogame.released} />
 				<label>Genres:</label>
-				<input type='text' onChange={handleChange} name='genres' value={newGame.genres} />
+				<Select
+					options={genresOptions}
+					isMulti
+					closeMenuOnSelect={false}
+					name='genres'
+					onChange={handleGenres}
+				/>
 				<label>Platforms:</label>
-				<input type='text' onChange={handleChange} name='platforms' value={newGame.platforms} />
+				<Select
+					options={platformsOptions}
+					isMulti
+					closeMenuOnSelect={false}
+					name='platforms'
+					onChange={handlePlatforms}
+				/>
 				<label>Rating:</label>
 				<input type='number' id='rating' name='rating' min='0.0' max='5.0'></input>
 				<button type='submit'>Submit</button>

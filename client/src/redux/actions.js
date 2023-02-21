@@ -10,7 +10,7 @@ export const LOAD_WAIT = "LOAD_WAIT";
 export const CLEAN_ID = "CLEAN_ID";
 export const ORDER_GENRE = "ORDER_GENRE";
 export const ORDER_NAME = "ORDER_NAME";
-// export const GET_PLATFORMS = "GET_PLATFORMS";
+export const GET_PLATFORMS = "GET_PLATFORMS";
 
 // Save videogames from API to store
 export const getVideogames = (name) => {
@@ -36,6 +36,15 @@ export const getGenres = () => {
 	};
 };
 
+// Save platforms from API to store
+export const getPlatforms = () => {
+	return async (dispatch) => {
+		const apiData = await axios.get(`${URL}/platforms`);
+		const platforms = apiData.data;
+		dispatch({ type: GET_PLATFORMS, payload: platforms });
+	};
+};
+
 // Save videogame for ID from API to store
 export const getDetail = (id) => {
 	return async (dispatch) => {
@@ -45,6 +54,17 @@ export const getDetail = (id) => {
 		videogame.genres = videogame.genres.map((g) => g.name).join(" - ");
 		videogame.platforms = videogame.platforms.map((p) => p.name).join(" - ");
 		dispatch({ type: GET_DETAIL, payload: videogame });
+	};
+};
+
+// Post new game
+export const postVideogame = (newGame) => {
+	return async (dispatch) => {
+		const post = await axios
+			.post(`${URL}/videogames`, newGame)
+			.then((res) => console.log(res))
+			.catch((err) => console.log(err));
+		return post;
 	};
 };
 

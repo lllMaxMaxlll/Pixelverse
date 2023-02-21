@@ -7,6 +7,7 @@ import {
 	CLEAN_ID,
 	ORDER_GENRE,
 	ORDER_NAME,
+	GET_PLATFORMS,
 } from "./actions";
 
 const initialState = {
@@ -16,7 +17,7 @@ const initialState = {
 	allGenres: [],
 	videogameDetail: [],
 	isLoading: true,
-	// allPlatforms: [],
+	allPlatforms: [],
 	// myFavorites: [],
 };
 
@@ -33,6 +34,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				...state,
 				allGenres: payload,
 			};
+		case GET_PLATFORMS:
+			return {
+				...state,
+				allPlatforms: payload,
+			};
+
 		case GET_DETAIL:
 			return {
 				...state,
