@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Select from "react-select";
+import { postVideogame } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./CreateVideogame.module.css";
-import Select from "react-select";
 
 const CreateVideogame = () => {
 	const dispatch = useDispatch();
@@ -38,29 +39,29 @@ const CreateVideogame = () => {
 		const property = event.target.name;
 		const value = event.target.value;
 
-		console.log(event);
-
 		// Validate value of input
 		validate({ ...newVideogame, [property]: value });
 		// Set input to state
 		setNewVideogame({ ...newVideogame, [property]: value });
 	};
 
+	// Handler for selected genres
 	const handleGenres = (event) => {
 		let selected = event.map((e) => e.value);
 		setNewVideogame({ ...newVideogame, genres: selected });
 	};
 
+	// Handler for selected platforms
 	const handlePlatforms = (event) => {
 		let selected = event.map((e) => e.value);
 		setNewVideogame({ ...newVideogame, platforms: selected });
 	};
 
 	const submitHandler = (event) => {
+		console.log(newVideogame);
 		// Prevent a browser reload/refresh
 		event.preventDefault();
-		console.log(newVideogame);
-		// En el submit hacemos el post a la url local, y el segundo argumento es el objeto a mandar
+		// Post to url
 		dispatch(postVideogame(newVideogame));
 	};
 

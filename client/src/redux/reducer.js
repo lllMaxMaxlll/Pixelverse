@@ -8,6 +8,7 @@ import {
 	ORDER_GENRE,
 	ORDER_NAME,
 	GET_PLATFORMS,
+	DELETE_GAME,
 } from "./actions";
 
 const initialState = {
@@ -60,7 +61,6 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				...state,
 				isLoading: false,
 			};
-
 		case ORDER_GENRE:
 			let filteredVideogames =
 				payload === "All"
@@ -72,7 +72,6 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				...state,
 				allVideogames: filteredVideogames,
 			};
-
 		case ORDER_NAME:
 			let ordered = [...state.allVideogames];
 			if (payload === "asc") {
@@ -91,6 +90,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
 			return {
 				...state,
 				allVideogames: ordered,
+			};
+		case DELETE_GAME:
+			let filtered = [...state.allVideogames].filter((G) => G.id !== payload);
+			return {
+				...state,
+				allVideogames: filtered,
 			};
 		default:
 			return state;

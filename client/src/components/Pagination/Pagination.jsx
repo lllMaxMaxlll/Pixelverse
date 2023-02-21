@@ -35,6 +35,7 @@ const Pagination = ({ videogames }) => {
 				image={game.background_image}
 				rating={game.rating}
 				genres={game.genres}
+				created={game.created}
 			/>
 		);
 	});

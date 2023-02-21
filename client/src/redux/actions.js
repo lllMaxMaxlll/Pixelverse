@@ -11,6 +11,7 @@ export const CLEAN_ID = "CLEAN_ID";
 export const ORDER_GENRE = "ORDER_GENRE";
 export const ORDER_NAME = "ORDER_NAME";
 export const GET_PLATFORMS = "GET_PLATFORMS";
+export const DELETE_GAME = "DELETE_GAME";
 
 // Save videogames from API to store
 export const getVideogames = (name) => {
@@ -62,8 +63,8 @@ export const postVideogame = (newGame) => {
 	return async (dispatch) => {
 		const post = await axios
 			.post(`${URL}/videogames`, newGame)
-			.then((res) => console.log(res))
-			.catch((err) => console.log(err));
+			.then((res) => alert(res.data))
+			.catch((err) => alert(err.response.data.error));
 		return post;
 	};
 };
@@ -91,4 +92,9 @@ export const orderGenre = (genre) => {
 // To order videogames by name ASC or DESC
 export const orderName = (order) => {
 	return { type: ORDER_NAME, payload: order };
+};
+
+//
+export const deleteGame = (id) => {
+	return { type: DELETE_GAME, payload: id };
 };
