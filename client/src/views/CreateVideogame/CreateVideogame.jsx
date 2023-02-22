@@ -14,6 +14,7 @@ const CreateVideogame = () => {
 		description: "",
 		imageURL: "",
 		released: "",
+		rating: "",
 		genres: [],
 		platforms: [],
 	});
@@ -29,7 +30,9 @@ const CreateVideogame = () => {
 	const [errors, setErrors] = useState({
 		name: "",
 		description: "",
+		imageURL: "",
 		released: "",
+		rating: "",
 		genres: "",
 		platforms: "",
 	});
@@ -40,7 +43,7 @@ const CreateVideogame = () => {
 		const value = event.target.value;
 
 		// Validate value of input
-		validate({ ...newVideogame, [property]: value });
+		setErrors(validate({ ...newVideogame, [property]: value }));
 		// Set input to state
 		setNewVideogame({ ...newVideogame, [property]: value });
 	};
@@ -58,18 +61,10 @@ const CreateVideogame = () => {
 	};
 
 	const submitHandler = (event) => {
-		console.log(newVideogame);
 		// Prevent a browser reload/refresh
 		event.preventDefault();
 		// Post to url
 		dispatch(postVideogame(newVideogame));
-	};
-
-	const validate = (newGame) => {
-		// Deberia validar con regex los inputs para que sean del tipo correcto
-		// if(nameregex.test(newGame.name)) {
-		// setErrors({...errors, name: 'Debe ser un nombre valido'})
-		// }
 	};
 
 	return (

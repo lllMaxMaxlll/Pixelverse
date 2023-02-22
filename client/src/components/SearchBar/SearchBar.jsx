@@ -32,6 +32,13 @@ const SearchBar = () => {
 				}}>
 				Search
 			</button>
+			<button
+				onClick={() => {
+					handleSearch();
+					setText("");
+				}}>
+				All Games
+			</button>
 		</div>
 	);
 };

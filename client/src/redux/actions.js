@@ -8,10 +8,12 @@ export const GET_DETAIL = "GET_DETAIL";
 export const LOAD_DONE = "LOAD_DONE";
 export const LOAD_WAIT = "LOAD_WAIT";
 export const CLEAN_ID = "CLEAN_ID";
-export const ORDER_GENRE = "ORDER_GENRE";
+export const FILTER_GENRE = "FILTER_GENRE";
+export const FILTER_CREATED = "FILTER_CREATED";
 export const ORDER_NAME = "ORDER_NAME";
 export const GET_PLATFORMS = "GET_PLATFORMS";
 export const DELETE_GAME = "DELETE_GAME";
+export const ORDER_RATING = "ORDER_RATING";
 
 // Save videogames from API to store
 export const getVideogames = (name) => {
@@ -85,13 +87,22 @@ export const cleanID = () => {
 };
 
 // To order videogames to genres
-export const orderGenre = (genre) => {
-	return { type: ORDER_GENRE, payload: genre };
+export const filterGenre = (genre) => {
+	return { type: FILTER_GENRE, payload: genre };
+};
+
+export const filterCreated = (genre) => {
+	return { type: FILTER_CREATED, payload: genre };
 };
 
 // To order videogames by name ASC or DESC
 export const orderName = (order) => {
 	return { type: ORDER_NAME, payload: order };
+};
+
+// To order videogames by name ASC or DESC
+export const orderRating = (order) => {
+	return { type: ORDER_RATING, payload: order };
 };
 
 //

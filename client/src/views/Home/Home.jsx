@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import CardsVideogames from "../../components/CardsVideogames/CardsVideogames";
 import Loader from "../../components/Loader/Loader";
 import style from "./Home.module.css";

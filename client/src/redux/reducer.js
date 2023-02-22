@@ -5,10 +5,12 @@ import {
 	LOAD_DONE,
 	LOAD_WAIT,
 	CLEAN_ID,
-	ORDER_GENRE,
+	FILTER_GENRE,
 	ORDER_NAME,
+	ORDER_RATING,
 	GET_PLATFORMS,
 	DELETE_GAME,
+	FILTER_CREATED,
 } from "./actions";
 
 const initialState = {
@@ -30,11 +32,13 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				allVideogames: payload,
 				videogames: payload,
 			};
+
 		case GET_GENRES:
 			return {
 				...state,
 				allGenres: payload,
 			};
+
 		case GET_PLATFORMS:
 			return {
 				...state,
@@ -46,22 +50,26 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				...state,
 				videogameDetail: payload,
 			};
+
 		case CLEAN_ID:
 			return {
 				...state,
 				videogameDetail: [],
 			};
+
 		case LOAD_WAIT:
 			return {
 				...state,
 				isLoading: true,
 			};
+
 		case LOAD_DONE:
 			return {
 				...state,
 				isLoading: false,
 			};
-		case ORDER_GENRE:
+
+		case FILTER_GENRE:
 			let filteredVideogames =
 				payload === "All"
 					? [...state.videogames]
@@ -72,16 +80,29 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				...state,
 				allVideogames: filteredVideogames,
 			};
+
+		case FILTER_CREATED:
+			let filteredCreated = [...state.videogames];
+			if (payload === "created") {
+				filteredCreated = [...state.videogames].filter((g) => g.created);
+			} else if (payload === "notCreated") {
+				filteredCreated = [...state.videogames].filter((g) => !g.created);
+			}
+			return {
+				...state,
+				allVideogames: filteredCreated,
+			};
+
 		case ORDER_NAME:
-			let ordered = [...state.allVideogames];
-			if (payload === "asc") {
-				ordered.sort((a, b) => {
+			let orderName = [...state.allVideogames];
+			if (payload === "a-z") {
+				orderName.sort((a, b) => {
 					if (a.name > b.name) return 1;
 					if (a.name < b.name) return -1;
 					return 0;
 				});
 			} else {
-				ordered.sort((a, b) => {
+				orderName.sort((a, b) => {
 					if (a.name < b.name) return 1;
 					if (a.name > b.name) return -1;
 					return 0;
@@ -89,14 +110,37 @@ const rootReducer = (state = initialState, { type, payload }) => {
 			}
 			return {
 				...state,
-				allVideogames: ordered,
+				allVideogames: orderName,
 			};
+
+		case ORDER_RATING:
+			let orderRating = [...state.allVideogames];
+			if (payload === "0-5") {
+				orderRating.sort((a, b) => {
+					if (a.rating > b.rating) return 1;
+					if (a.rating < b.rating) return -1;
+					return 0;
+				});
+			} else {
+				orderRating.sort((a, b) => {
+					if (a.rating < b.rating) return 1;
+					if (a.rating > b.rating) return -1;
+					return 0;
+				});
+			}
+			return {
+				...state,
+				allVideogames: orderRating,
+			};
+
 		case DELETE_GAME:
-			let filtered = [...state.allVideogames].filter((G) => G.id !== payload);
+			let filtered = state.allVideogames.filter((G) => G.id !== payload);
 			return {
 				...state,
 				allVideogames: filtered,
+				videogames: filtered,
 			};
+
 		default:
 			return state;
 	}

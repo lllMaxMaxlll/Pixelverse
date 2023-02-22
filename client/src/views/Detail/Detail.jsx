@@ -24,11 +24,11 @@ const Detail = () => {
 	}, [id]);
 
 	return (
-		<div>
+		<div className={style.container}>
 			{loading ? (
 				<Loader />
 			) : (
-				<div className={style.container}>
+				<div className={style.detail}>
 					<h1>{game.name}</h1>
 					<img src={game.background_image} alt={game.name} />
 					<p dangerouslySetInnerHTML={{ __html: game.description }} />

@@ -7,7 +7,7 @@ import style from "./CardsVideogames.module.css";
 const CardsVideogames = () => {
 	// Get games from store redux
 	const videogames = useSelector((state) => state.allVideogames);
-	console.log(videogames);
+
 	return (
 		<div>
 			<SearchBar />

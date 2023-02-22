@@ -1,0 +1,14 @@
+input {
+	background-color: #eee;
+	border: none;
+	padding: 0.5rem;
+	font-size: 1rem;
+	width: 13em;
+	color: rgb(245, 134, 226);
+	box-shadow: 0 0.4rem #dfd9d9;
+	cursor: pointer;
+}
+
+input:focus {
+	outline-color: rgb(158, 0, 0);
+}
