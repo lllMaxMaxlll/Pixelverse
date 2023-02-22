@@ -16,17 +16,27 @@ export const DELETE_GAME = "DELETE_GAME";
 export const ORDER_RATING = "ORDER_RATING";
 
 // Save videogames from API to store
-export const getVideogames = (name) => {
+export const getVideogames = () => {
 	return async (dispatch) => {
-		// If have name to search
-		if (name) {
-			const apiDataName = await axios.get(`${URL}/videogames?name=${name}`);
-			dispatch({ type: GET_VIDEOGAMES, payload: apiDataName.data });
-			return;
+		try {
+			// Get all
+			const apiData = await axios.get(`${URL}/videogames`);
+			return dispatch({ type: GET_VIDEOGAMES, payload: apiData.data });
+		} catch (error) {
+			alert(error.response.data.error);
 		}
-		// If no name, get all
-		const apiData = await axios.get(`${URL}/videogames`);
-		dispatch({ type: GET_VIDEOGAMES, payload: apiData.data });
+	};
+};
+
+export const getVideogamesByName = (name) => {
+	return async (dispatch) => {
+		try {
+			// Search by name
+			const apiDataName = await axios.get(`${URL}/videogames?name=${name}`);
+			return dispatch({ type: GET_VIDEOGAMES, payload: apiDataName.data });
+		} catch (error) {
+			alert(error.response.data.error);
+		}
 	};
 };
 
@@ -62,7 +72,7 @@ export const getDetail = (id) => {
 
 // Post new game
 export const postVideogame = (newGame) => {
-	return async (dispatch) => {
+	return async () => {
 		const post = await axios
 			.post(`${URL}/videogames`, newGame)
 			.then((res) => alert(res.data))

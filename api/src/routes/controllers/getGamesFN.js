@@ -5,7 +5,7 @@ const { URL, API_KEY } = process.env;
 const get100Games = async () => {
 	let api = await axios.get(`${URL}/games?key=${API_KEY}`);
 	let games = [];
-	for (let i = 0; i < 2; i++) {
+	for (let i = 0; i < 10; i++) {
 		games.push(...api.data.results);
 		api = await axios.get(api.data.next);
 		i++;

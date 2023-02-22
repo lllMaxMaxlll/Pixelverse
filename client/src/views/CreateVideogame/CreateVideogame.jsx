@@ -3,6 +3,7 @@ import Select from "react-select";
 import { postVideogame } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./CreateVideogame.module.css";
+import validate from "./validate";
 
 const CreateVideogame = () => {
 	const dispatch = useDispatch();
@@ -46,6 +47,7 @@ const CreateVideogame = () => {
 		setErrors(validate({ ...newVideogame, [property]: value }));
 		// Set input to state
 		setNewVideogame({ ...newVideogame, [property]: value });
+		console.log(newVideogame);
 	};
 
 	// Handler for selected genres
@@ -71,8 +73,10 @@ const CreateVideogame = () => {
 		<div className={style.container}>
 			<h1>CreateVideogame</h1>
 			<form onSubmit={submitHandler}>
+				{errors.name && <span>{errors.name}</span>}
 				<label>Name:</label>
 				<input type='text' onChange={handleChange} name='name' value={newVideogame.name} />
+				{errors.description && <span>{errors.description}</span>}
 				<label>Description:</label>
 				<input
 					type='text'
@@ -80,8 +84,10 @@ const CreateVideogame = () => {
 					name='description'
 					value={newVideogame.description}
 				/>
+				{errors.imageURL && <span>{errors.imageURL}</span>}
 				<label>Image URL:</label>
 				<input type='url' onChange={handleChange} name='imageURL' value={newVideogame.imageURL} />
+				{errors.released && <span>{errors.released}</span>}
 				<label>Released date:</label>
 				<input type='date' onChange={handleChange} name='released' value={newVideogame.released} />
 				<label>Genres:</label>
@@ -100,8 +106,15 @@ const CreateVideogame = () => {
 					name='platforms'
 					onChange={handlePlatforms}
 				/>
+				{errors.rating && <span>{errors.rating}</span>}
 				<label>Rating:</label>
-				<input type='number' id='rating' name='rating' min='0.0' max='5.0'></input>
+				<input
+					type='number'
+					id='rating'
+					name='rating'
+					min='0'
+					max='5'
+					onChange={handleChange}></input>
 				<button type='submit'>Submit</button>
 			</form>
 		</div>

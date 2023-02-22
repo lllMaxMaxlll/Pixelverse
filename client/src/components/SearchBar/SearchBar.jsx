@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getVideogames, orderName } from "../../redux/actions";
+import { getVideogames, getVideogamesByName } from "../../redux/actions";
 
 const SearchBar = () => {
 	const [text, setText] = useState("");
@@ -11,8 +11,10 @@ const SearchBar = () => {
 	};
 
 	const handleSearch = (text) => {
-		// Dispatch con el text para buscarlo en la api
-		dispatch(getVideogames(text)).then((_) => dispatch(orderName("asc")));
+		// If no name, get all
+		if (!text) dispatch(getVideogames());
+		// Dispatch with name from state
+		dispatch(getVideogamesByName(text));
 	};
 
 	return (
@@ -22,7 +24,6 @@ const SearchBar = () => {
 				key='text'
 				type='text'
 				placeholder='Search by name'
-				// className={styles.input}
 				onChange={handleChange}
 			/>
 			<button
