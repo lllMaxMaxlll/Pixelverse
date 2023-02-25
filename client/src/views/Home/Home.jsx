@@ -9,5 +9,4 @@ const Home = () => {
 
 	return <div className={style.container}>{loading ? <Loader /> : <CardsVideogames />}</div>;
 };
-
 export default Home;
