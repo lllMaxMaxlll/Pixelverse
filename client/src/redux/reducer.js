@@ -11,6 +11,9 @@ import {
 	GET_PLATFORMS,
 	DELETE_GAME,
 	FILTER_CREATED,
+	POST_GAME,
+	SHOW_ALL,
+	GET_VIDEOGAMES_BY_NAME,
 } from "./actions";
 
 const initialState = {
@@ -33,6 +36,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				videogames: payload,
 			};
 
+		case GET_VIDEOGAMES_BY_NAME:
+			return {
+				...state,
+				allVideogames: payload,
+			};
+
 		case GET_GENRES:
 			return {
 				...state,
@@ -45,10 +54,23 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				allPlatforms: payload,
 			};
 
+		case POST_GAME:
+			return {
+				...state,
+				videogames: [...state.videogames].unshift(payload),
+				allVideogames: [...state.allVideogames].unshift(payload),
+			};
+
 		case GET_DETAIL:
 			return {
 				...state,
 				videogameDetail: payload,
+			};
+
+		case SHOW_ALL:
+			return {
+				...state,
+				allVideogames: [...state.videogames],
 			};
 
 		case CLEAN_ID:
@@ -85,7 +107,8 @@ const rootReducer = (state = initialState, { type, payload }) => {
 			let filteredCreated = [...state.videogames];
 			if (payload === "created") {
 				filteredCreated = [...state.videogames].filter((g) => g.created);
-			} else if (payload === "notCreated") {
+			}
+			if (payload === "notCreated") {
 				filteredCreated = [...state.videogames].filter((g) => !g.created);
 			}
 			return {

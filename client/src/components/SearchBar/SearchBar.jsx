@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { getVideogames, getVideogamesByName } from "../../redux/actions";
+import { showAllGames, getVideogamesByName } from "../../redux/actions";
 
 const SearchBar = () => {
 	const [text, setText] = useState("");
@@ -11,10 +11,14 @@ const SearchBar = () => {
 	};
 
 	const handleSearch = (text) => {
-		// If no name, get all
-		if (!text) dispatch(getVideogames());
+		// If no name, recover all
+		if (text === undefined) {
+			dispatch(showAllGames());
+			return;
+		}
 		// Dispatch with name from state
 		dispatch(getVideogamesByName(text));
+		setText("");
 	};
 
 	return (
@@ -29,14 +33,12 @@ const SearchBar = () => {
 			<button
 				onClick={() => {
 					handleSearch(text);
-					setText("");
 				}}>
 				Search
 			</button>
 			<button
 				onClick={() => {
 					handleSearch();
-					setText("");
 				}}>
 				All Games
 			</button>

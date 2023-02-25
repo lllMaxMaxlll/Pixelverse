@@ -3,10 +3,13 @@ import axios from "axios";
 const URL = "http://localhost:3001";
 
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES";
+export const GET_VIDEOGAMES_BY_NAME = "GET_VIDEOGAMES_BY_NAME";
 export const GET_GENRES = "GET_GENRES";
 export const GET_DETAIL = "GET_DETAIL";
+export const POST_GAME = "POST_GAME";
 export const LOAD_DONE = "LOAD_DONE";
 export const LOAD_WAIT = "LOAD_WAIT";
+export const SHOW_ALL = "SHOW_ALL";
 export const CLEAN_ID = "CLEAN_ID";
 export const FILTER_GENRE = "FILTER_GENRE";
 export const FILTER_CREATED = "FILTER_CREATED";
@@ -33,7 +36,7 @@ export const getVideogamesByName = (name) => {
 		try {
 			// Search by name
 			const apiDataName = await axios.get(`${URL}/videogames?name=${name}`);
-			return dispatch({ type: GET_VIDEOGAMES, payload: apiDataName.data });
+			return dispatch({ type: GET_VIDEOGAMES_BY_NAME, payload: apiDataName.data });
 		} catch (error) {
 			alert(error.response.data.error);
 		}
@@ -73,12 +76,16 @@ export const getDetail = (id) => {
 // Post new game
 export const postVideogame = (newGame) => {
 	return async () => {
-		const post = await axios
+		await axios
 			.post(`${URL}/videogames`, newGame)
 			.then((res) => alert(res.data))
 			.catch((err) => alert(err.response.data.error));
-		return post;
 	};
+};
+
+// Restore all games from backup
+export const showAllGames = () => {
+	return { type: SHOW_ALL, payload: true };
 };
 
 // When is loading
@@ -96,11 +103,12 @@ export const cleanID = () => {
 	return { type: CLEAN_ID, payload: true };
 };
 
-// To order videogames to genres
+// To filter videogames to genres
 export const filterGenre = (genre) => {
 	return { type: FILTER_GENRE, payload: genre };
 };
 
+// To filter videogames created
 export const filterCreated = (genre) => {
 	return { type: FILTER_CREATED, payload: genre };
 };
@@ -110,12 +118,12 @@ export const orderName = (order) => {
 	return { type: ORDER_NAME, payload: order };
 };
 
-// To order videogames by name ASC or DESC
+// To order videogames by rating
 export const orderRating = (order) => {
 	return { type: ORDER_RATING, payload: order };
 };
 
-//
+// To delete game created
 export const deleteGame = (id) => {
 	return { type: DELETE_GAME, payload: id };
 };

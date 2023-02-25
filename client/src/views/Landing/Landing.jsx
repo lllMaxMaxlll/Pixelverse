@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getGenres, getPlatforms, getVideogames, loadDone } from "../../redux/actions";
 import style from "./Landing.module.css";
+import { LandingBg } from "../../components/LandingBg/LandingBg";
 
 const Landing = () => {
 	const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Landing = () => {
 		dispatch(getVideogames()).then(() => dispatch(loadDone()));
 		dispatch(getGenres());
 		dispatch(getPlatforms());
-	}, [videogames]);
+	}, []);
 
 	return (
 		<div className={style.container}>

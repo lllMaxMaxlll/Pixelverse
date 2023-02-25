@@ -47,7 +47,6 @@ const CreateVideogame = () => {
 		setErrors(validate({ ...newVideogame, [property]: value }));
 		// Set input to state
 		setNewVideogame({ ...newVideogame, [property]: value });
-		console.log(newVideogame);
 	};
 
 	// Handler for selected genres

@@ -34,7 +34,7 @@ export const Filters = () => {
 					<option value='5-0'>5-0</option>
 					<option value='0-5'>0-5</option>
 				</select>
-				<select name='genres' onChange={handleFilterGenre} className={style.select}>
+				<select name='filterGenres' onChange={handleFilterGenre} className={style.select}>
 					<option value='All'>All</option>
 					{allGenres.map((G) => (
 						<option value={G.name} key={G.id}>
@@ -42,7 +42,7 @@ export const Filters = () => {
 						</option>
 					))}
 				</select>
-				<select name='created' onChange={handleFilterCreated} className={style.select}>
+				<select name='filterCreated' onChange={handleFilterCreated} className={style.select}>
 					<option value='All'>All</option>
 					<option value='created'>Created</option>
 					<option value='notCreated'>Not Created</option>
