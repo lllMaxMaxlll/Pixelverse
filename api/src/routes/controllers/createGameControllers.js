@@ -1,7 +1,15 @@
 const { Videogame, Genre, Platform } = require("../../db");
 
 // Create new game
-const createGame = async (name, description, image, released, rating, platforms, genres) => {
+const createGame = async (
+	name,
+	description,
+	background_image,
+	released,
+	rating,
+	platforms,
+	genres
+) => {
 	// Verify required data
 	if (!name && !description && !platforms) {
 		throw Error("Missing required data");
@@ -15,7 +23,7 @@ const createGame = async (name, description, image, released, rating, platforms,
 	if (gameAlreadyCreated) throw Error("The game is already created");
 
 	// Creating new game in DB
-	const newGame = await Videogame.create({ name, description, image, released, rating });
+	const newGame = await Videogame.create({ name, description, background_image, released, rating });
 
 	// Create or find all genres from array and add to Game
 	genres.forEach(async (e) => {

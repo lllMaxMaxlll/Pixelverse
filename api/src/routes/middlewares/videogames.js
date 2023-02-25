@@ -17,6 +17,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
 	const { name, description, background_image, released, rating, platforms, genres } = req.body;
+	console.log(background_image);
 	try {
 		await createGame(name, description, background_image, released, rating, platforms, genres);
 		res.status(201).send("Game created!");
