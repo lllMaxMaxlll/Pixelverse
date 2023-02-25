@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { postVideogame } from "../../redux/actions";
+import { postVideogame, loading, loadDone, getVideogames } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./CreateVideogame.module.css";
 import validate from "./validate";
@@ -65,7 +65,15 @@ const CreateVideogame = () => {
 		// Prevent a browser reload/refresh
 		event.preventDefault();
 		// Post to url
-		dispatch(postVideogame(newVideogame));
+		dispatch(loading());
+
+		console.log(dispatch(getVideogames()));
+
+		dispatch(postVideogame(newVideogame)).then(() =>
+			dispatch(getVideogames()).then((result) => {
+				dispatch(loadDone());
+			})
+		);
 	};
 
 	return (
