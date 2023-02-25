@@ -8,7 +8,6 @@ import style from "./CardsVideogames.module.css";
 const CardsVideogames = () => {
 	// Get games from store redux
 	const videogames = useSelector((state) => state.allVideogames);
-	useEffect(() => {}, [videogames]);
 	console.log(videogames);
 	return (
 		<div>

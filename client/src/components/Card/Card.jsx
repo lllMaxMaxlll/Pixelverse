@@ -18,8 +18,10 @@ const Card = (props) => {
 				<NavLink to={`/detail/${props.id}`}>
 					<h2 className={style.title}>{props.name}</h2>
 				</NavLink>
-				<div className={style.subtitle}>
-					<h2>{props.rating}</h2>
+				<div>
+					{props.genres.map((g) => (
+						<p key={g.id}>{g.name}</p>
+					))}
 				</div>
 			</div>
 			{props.created && <button onClick={() => onClose(props.id)}>X</button>}
