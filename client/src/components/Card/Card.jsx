@@ -13,17 +13,17 @@ const Card = (props) => {
 
 	return (
 		<div className={style.card}>
-			<img src={props.image} alt='bg-game' className={style.cardImg} />
 			<div className={style.cardInfo}>
 				<NavLink to={`/detail/${props.id}`}>
 					<h2 className={style.title}>{props.name}</h2>
 				</NavLink>
-				<div>
-					{props.genres.map((g) => (
-						<p key={g.id}>{g.name}</p>
-					))}
-				</div>
 			</div>
+			<div className={style.cardSubtitle}>
+				{props.genres.map((g) => (
+					<p key={g.id}>{g.name}</p>
+				))}
+			</div>
+			<img src={props.image} alt='bg-game' className={style.cardImg} />
 			{props.created && <button onClick={() => onClose(props.id)}>X</button>}
 		</div>
 	);
