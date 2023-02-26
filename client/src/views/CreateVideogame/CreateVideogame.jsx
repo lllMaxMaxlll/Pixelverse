@@ -66,12 +66,14 @@ const CreateVideogame = () => {
 	// Handler for selected genres
 	const handleGenres = (event) => {
 		let selected = event.map((e) => e.value);
+		setErrors(validate({ ...newVideogame, genres: selected }));
 		setNewVideogame({ ...newVideogame, genres: selected });
 	};
 
 	// Handler for selected platforms
 	const handlePlatforms = (event) => {
 		let selected = event.map((e) => e.value);
+		setErrors(validate({ ...newVideogame, platforms: selected }));
 		setNewVideogame({ ...newVideogame, platforms: selected });
 	};
 
