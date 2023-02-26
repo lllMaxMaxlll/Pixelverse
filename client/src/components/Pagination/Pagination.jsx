@@ -32,7 +32,7 @@ const Pagination = ({ videogames }) => {
 				key={game.id}
 				id={game.id}
 				name={game.name}
-				image={game.background_image}
+				background_image={game.background_image}
 				rating={game.rating}
 				genres={game.genres}
 				created={game.created}

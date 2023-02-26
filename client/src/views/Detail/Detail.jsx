@@ -15,6 +15,8 @@ const Detail = () => {
 	// Get info from store
 	const game = useSelector((state) => state.videogameDetail);
 
+	console.log(game);
+
 	useEffect(() => {
 		dispatch(getDetail(id)).then(() => setLoading(false));
 		return () => {

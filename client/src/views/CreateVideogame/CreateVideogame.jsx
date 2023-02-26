@@ -4,48 +4,62 @@ import { postVideogame, loading, loadDone, getVideogames } from "../../redux/act
 import { useDispatch, useSelector } from "react-redux";
 import style from "./CreateVideogame.module.css";
 import validate from "./validate";
+import { useNavigate } from "react-router-dom";
+
+// Cuando hago el create, NO hago el dispatch del GetVideogames(),
+// Agrego el juego nuevo a los array del store
+// Pero tendria que usar el useEffect para que observe el array de juegos
+// Y que si nota algun cambio, vuelva a renderizar
+// PD: El post se hace igual solamente que no volvemos a pedir la info al servidor
+// por cuestion del tiempo de retraso
 
 const CreateVideogame = () => {
 	const dispatch = useDispatch();
 	const genres = useSelector((state) => state.allGenres);
 	const platforms = useSelector((state) => state.allPlatforms);
+	const navigate = useNavigate();
 
+	// Set newVideogame values
 	const [newVideogame, setNewVideogame] = useState({
 		name: "",
 		description: "",
-		imageURL: "",
+		background_image: "",
 		released: "",
 		rating: "",
 		genres: [],
 		platforms: [],
 	});
 
+	// Create values for genres input
 	const genresOptions = genres.map((g) => {
 		return { value: g.name, label: g.name };
 	});
 
+	// Create values for platforms input
 	const platformsOptions = platforms.map((p) => {
 		return { value: p.name, label: p.name };
 	});
 
+	// Set errors
 	const [errors, setErrors] = useState({
 		name: "",
 		description: "",
-		imageURL: "",
+		background_image: "",
 		released: "",
 		rating: "",
 		genres: "",
 		platforms: "",
 	});
 
+	// Check inputs errors to enable/disable submit
+	const isValidForm = Object.values(errors).map((e) => e.valueOf()).length ? true : false;
+
 	// Set property of videogame in any input change
 	const handleChange = (event) => {
 		const property = event.target.name;
 		const value = event.target.value;
 
-		// Validate value of input
 		setErrors(validate({ ...newVideogame, [property]: value }));
-		// Set input to state
 		setNewVideogame({ ...newVideogame, [property]: value });
 	};
 
@@ -64,16 +78,16 @@ const CreateVideogame = () => {
 	const submitHandler = (event) => {
 		// Prevent a browser reload/refresh
 		event.preventDefault();
-		// Post to url
+		// Set loading logo
 		dispatch(loading());
-
-		console.log(dispatch(getVideogames()));
-
+		// Post to url and when done, finish loader
 		dispatch(postVideogame(newVideogame)).then(() =>
-			dispatch(getVideogames()).then((result) => {
+			dispatch(getVideogames()).then(() => {
 				dispatch(loadDone());
 			})
 		);
+		// Redirect to home
+		navigate("/home");
 	};
 
 	return (
@@ -82,21 +96,36 @@ const CreateVideogame = () => {
 			<form onSubmit={submitHandler}>
 				{errors.name && <span>{errors.name}</span>}
 				<label>Name:</label>
-				<input type='text' onChange={handleChange} name='name' value={newVideogame.name} />
+				<input
+					type='text'
+					onChange={handleChange}
+					name='name'
+					value={newVideogame.name}
+					minLength='3'
+					maxLength='20'
+				/>
 				{errors.description && <span>{errors.description}</span>}
 				<label>Description:</label>
-				<input
+				<textarea
+					minLength='10'
+					maxLength='250'
 					type='text'
 					onChange={handleChange}
 					name='description'
 					value={newVideogame.description}
 				/>
-				{errors.imageURL && <span>{errors.imageURL}</span>}
+				{errors.background_image && <span>{errors.background_image}</span>}
 				<label>Image URL:</label>
-				<input type='url' onChange={handleChange} name='imageURL' value={newVideogame.imageURL} />
+				<input
+					type='url'
+					onChange={handleChange}
+					name='background_image'
+					value={newVideogame.background_image}
+				/>
 				{errors.released && <span>{errors.released}</span>}
 				<label>Released date:</label>
 				<input type='date' onChange={handleChange} name='released' value={newVideogame.released} />
+				{errors.genres && <span>{errors.genres}</span>}
 				<label>Genres:</label>
 				<Select
 					options={genresOptions}
@@ -105,6 +134,7 @@ const CreateVideogame = () => {
 					name='genres'
 					onChange={handleGenres}
 				/>
+				{errors.platforms && <span>{errors.platforms}</span>}
 				<label>Platforms:</label>
 				<Select
 					options={platformsOptions}
@@ -119,10 +149,12 @@ const CreateVideogame = () => {
 					type='number'
 					id='rating'
 					name='rating'
-					min='0'
+					min='1'
 					max='5'
 					onChange={handleChange}></input>
-				<button type='submit'>Submit</button>
+				<button type='submit' disabled={isValidForm}>
+					Submit
+				</button>
 			</form>
 		</div>
 	);

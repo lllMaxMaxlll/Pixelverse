@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getGenres, getPlatforms, getVideogames, loadDone } from "../../redux/actions";
 import style from "./Landing.module.css";
-import { LandingBg } from "../../components/LandingBg/LandingBg";
+import { BgLanding } from "../../components/BgLanding/BgLanding";
 
 const Landing = () => {
 	const navigate = useNavigate();
@@ -24,6 +24,7 @@ const Landing = () => {
 			<div>
 				<button onClick={() => navigate("/home")}>Touch me for start!</button>
 			</div>
+			<BgLanding />
 		</div>
 	);
 };

@@ -1,19 +1,23 @@
 const validate = (input) => {
 	const errors = {};
 
-	const regexName = /^\S[a-zA-Z\s]{1,20}\S$/;
-	const regexDescription = /^[a-zA-ZÀ-ÿ0-9\s]{25,500}$/u;
-	const regexUrl =
-		/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/gi;
-	const regexDate =
-		/(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})/gi;
-	const regexNumber = /^([1-5]|5)$/;
+	const regexName = /^\S[a-z0-9A-Z\s]{1,18}\S$/;
+	const regexDescription = /^[,.;:?!-_a-zA-ZÀ-ÿ0-9\s]{10,250}$/u;
+	const regexUrl = /(http[s]?:\/\/.*\.(?:png|jpg|webp|gif|svg|jpeg))/i;
+	const regexDate = /^\d{4}\-(0?[1-9]|1[012])\-(0?[1-9]|[12][0-9]|3[01])$/;
+	const regexNumber = /^(?:[1-4](?:\.\d+)?|5(?:\.0+)?)$/;
 
-	// if (!regexText.test(input.name)) errors.name = "Must be a valid text, no symbols";
-	// if (!regexText.test(input.description)) errors.description = "Must be a valid text, no symbols";
-	// if (!regexUrl.test(input.imageURL)) errors.imageURL = "Must be a valid url";
-	// if (!regexDate.test(input.released)) errors.released = "Must be a valid date";
-	// if (!regexNumber.test(input.rating)) errors.rating = "Must be a number between 0 and 5";
+	if (!regexName.test(input.name.trim()) || !input.name) {
+		errors.name = "Must contain between 3 and 20 characters";
+	}
+	if (!regexDescription.test(input.description.trim()) || !input.description) {
+		errors.description = "Must contain between 10 and 250 characters";
+	}
+	if (!regexUrl.test(input.background_image)) errors.background_image = "Must be a valid url";
+	if (!regexDate.test(input.released)) errors.released = "Must be a valid date";
+	if (!regexNumber.test(input.rating)) errors.rating = "Must be a number between 1.0 and 5.0";
+	if (!input.genres.length) errors.genres = "Select one or more genres";
+	if (!input.platforms.length) errors.platforms = "Select one or more platforms";
 
 	return errors;
 };
