@@ -23,7 +23,7 @@ const Card = (props) => {
 					<p key={g.id}>{g.name}</p>
 				))}
 			</div>
-			<img src={props.image} alt='bg-game' className={style.cardImg} />
+			<img src={props.background_image} alt='bg-game' className={style.cardImg} />
 			{props.created && <button onClick={() => onClose(props.id)}>X</button>}
 		</div>
 	);
