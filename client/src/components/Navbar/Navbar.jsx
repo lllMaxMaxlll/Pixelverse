@@ -5,7 +5,7 @@ const Navbar = () => {
 	return (
 		<div className={style.nav}>
 			<NavLink to={"/home"} className={style.svglogo}>
-				<h3>PIXELVERSE</h3>
+				<h1 className={style.logo}>PIXELVERSE</h1>
 			</NavLink>
 			<div className={style.buttons}>
 				<div>

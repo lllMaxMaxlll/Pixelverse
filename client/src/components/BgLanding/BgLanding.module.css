@@ -34,6 +34,12 @@
 	filter: drop-shadow(0px 0px 10px #4d194d);
 }
 
+.icons:nth-child(even) svg:hover {
+	color: #212f45;
+	transition: 0s;
+	filter: drop-shadow(0px 0px 10px #212f45);
+}
+
 .container .icons div {
 	animation: animate1 80s linear infinite;
 	animation-delay: -80s;
