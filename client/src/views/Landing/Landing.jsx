@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getGenres, getPlatforms, getVideogames, loadDone } from "../../redux/actions";
 import style from "./Landing.module.css";
 import { BgLanding } from "../../components/BgLanding/BgLanding";
-
+import { Pixelheart } from "./Pixelheart";
 const Landing = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -20,9 +20,14 @@ const Landing = () => {
 
 	return (
 		<div className={style.container}>
-			<h1>PIXELVERSE</h1>
-			<div>
-				<button onClick={() => navigate("/home")}>Touch me for start!</button>
+			<div className={style.landing}>
+				<Pixelheart />
+				<h1>PIXELVERSE</h1>
+				<div>
+					<button className={style.buttonStart} onClick={() => navigate("/home")}>
+						Press start!
+					</button>
+				</div>
 			</div>
 			<BgLanding />
 		</div>
