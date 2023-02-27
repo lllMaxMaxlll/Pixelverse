@@ -1,8 +1,8 @@
 import React from "react";
 
-export const Pixelheart = () => {
+export const Pixelheart = ({ color, width = "50px" }) => {
 	return (
-		<svg x='0px' y='0px' viewBox='0 0 864 864' fill='#fff' width='50px'>
+		<svg x='0px' y='0px' viewBox='0 0 864 864' fill={color} width={width}>
 			<linearGradient
 				id='linear-gradient'
 				gradientUnits='userSpaceOnUse'
