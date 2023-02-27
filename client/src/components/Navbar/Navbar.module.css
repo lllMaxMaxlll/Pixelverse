@@ -11,25 +11,74 @@
 	background-color: #0000003a;
 }
 
-.logo {
-	/* text-align: center;
-	background: linear-gradient(34deg, #006466, #144552, #212f45, #312244, #4d194d);
-	background-size: 100% auto;
-	animation: gradient 4s ease infinite;
-	-webkit-animation: gradient 4s ease infinite;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent; */
+.logoContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logoContainer * {
+	margin: 0 3px;
+}
+
+.logoContainer svg {
+	animation: animlogo 6s ease-in-out infinite;
+	-webkit-animation: animlogo 6s ease-in-out infinite;
+}
+
+.logoName {
+	font-family: "Silkscreen", cursive;
 	background: linear-gradient(34deg, #006466, #144552, #212f45, #312244, #4d194d);
 	background-size: 100% 10%;
-	-webkit-animation: AnimationGradient 3s ease infinite;
-	animation: AnimationGradient 3s ease infinite;
+	-webkit-animation: animagradient 3s ease infinite;
+	animation: animagradient 3s ease infinite;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-@keyframes AnimationGradient {
+.buttons {
+	font-size: 18px;
+	margin: 0 10px;
+	color: #e1e1e1;
+	font-family: inherit;
+	font-weight: 800;
+	cursor: pointer;
+	position: relative;
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+	transition-duration: 400ms;
+	transition-property: color;
+}
+
+.buttons:focus,
+.buttons:hover {
+	color: #fff;
+}
+
+.buttons:focus:after,
+.buttons:hover:after {
+	width: 100%;
+	left: 0%;
+}
+
+.buttons:after {
+	content: "";
+	pointer-events: none;
+	bottom: -2px;
+	left: 50%;
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	background-color: #fff;
+	transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+	transition-duration: 400ms;
+	transition-property: width, left;
+}
+
+@keyframes animagradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -41,7 +90,7 @@
 	}
 }
 
-@-webkit-keyframes AnimationGradient {
+@-webkit-keyframes animagradient {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -50,5 +99,29 @@
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+@keyframes animlogo {
+	0% {
+		fill: #4d194d;
+	}
+	50% {
+		fill: #144552;
+	}
+	100% {
+		fill: #4d194d;
+	}
+}
+
+@keyframes animlogo {
+	0% {
+		fill: #4d194d;
+	}
+	50% {
+		fill: #144552;
+	}
+	100% {
+		fill: #4d194d;
 	}
 }

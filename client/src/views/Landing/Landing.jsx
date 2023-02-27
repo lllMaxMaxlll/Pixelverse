@@ -21,7 +21,7 @@ const Landing = () => {
 	return (
 		<div className={style.container}>
 			<div className={style.landing}>
-				<Pixelheart />
+				<Pixelheart color={"#fff"} />
 				<h1>PIXELVERSE</h1>
 				<div>
 					<button className={style.buttonStart} onClick={() => navigate("/home")}>
