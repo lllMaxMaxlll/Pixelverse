@@ -8,10 +8,5 @@ const Home = () => {
 	const loading = useSelector((state) => state.isLoading);
 
 	return <div className={style.container}>{loading ? <Loader /> : <CardsVideogames />}</div>;
-	// return (
-	// 	<div className={style.container}>
-	// 		<Loader />
-	// 	</div>
-	// );
 };
 export default Home;

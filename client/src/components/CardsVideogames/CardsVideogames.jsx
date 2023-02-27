@@ -9,9 +9,11 @@ const CardsVideogames = () => {
 	const videogames = useSelector((state) => state.allVideogames);
 
 	return (
-		<div>
-			<SearchBar />
-			<Filters />
+		<div className={style.container}>
+			<div className={style.buttonContainer}>
+				<SearchBar />
+				<Filters />
+			</div>
 			<Pagination videogames={videogames} />
 		</div>
 	);

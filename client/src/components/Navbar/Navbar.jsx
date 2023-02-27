@@ -6,7 +6,7 @@ const Navbar = () => {
 	return (
 		<div className={style.nav}>
 			<div className={style.logoContainer}>
-				<Pixelheart color={"#4d194d"} width={"32px"} />
+				<Pixelheart color={"#4d194d"} width={"35px"} />
 				<NavLink to={"/home"}>
 					<h1 className={style.logoName}>PIXELVERSE</h1>
 				</NavLink>

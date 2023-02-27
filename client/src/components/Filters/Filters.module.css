@@ -1,0 +1,15 @@
+.selectors select {
+	background-color: #111;
+	margin: 0 0.5rem;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	padding: 8px 10px;
+}
+
+.selectors option {
+	font-size: 1rem;
+}
+
+.selectors select:focus-visible {
+	outline: 0px solid #ffffff;
+}
