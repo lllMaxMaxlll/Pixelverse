@@ -10,11 +10,19 @@ const Pagination = ({ videogames }) => {
 	// Calculate total of pages
 	const totalPages = Math.ceil(videogames.length / itemsPerPage);
 
+	const active = {
+		color: "red",
+	};
+
 	const getPageNumbers = (totalPages, currentPage) => {
 		const pageNumbers = [];
 		for (let i = 1; i <= totalPages; i++) {
+			let className = "";
+			if (currentPage === i) {
+				className = style.active;
+			}
 			pageNumbers.push(
-				<button key={i} onClick={() => setCurrentPage(i)}>
+				<button key={i} onClick={() => setCurrentPage(i)} className={className}>
 					{i}
 				</button>
 			);

@@ -1,6 +1,6 @@
 .card {
 	position: relative;
-	width: 400px;
+	width: 300px;
 	height: 400px;
 	margin: 1rem;
 	background-color: #00000025;
@@ -33,7 +33,7 @@
 .cardSubtitle {
 	position: absolute;
 	color: transparent;
-	bottom: -20px;
+	bottom: -5px;
 	width: 100%;
 	text-align: center;
 }

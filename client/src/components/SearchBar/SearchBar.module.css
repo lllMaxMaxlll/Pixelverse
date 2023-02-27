@@ -15,6 +15,7 @@
 }
 
 .buttonsContainer button {
+	font-size: 1rem;
 	margin: 0 0.5rem;
 	color: #ffffff;
 	border: 2px solid #ffffff;
@@ -87,7 +88,6 @@
 	top: 5px;
 	transition: 0.2s;
 	color: #006466;
-	font-weight: 700;
 }
 
 .formField:required,

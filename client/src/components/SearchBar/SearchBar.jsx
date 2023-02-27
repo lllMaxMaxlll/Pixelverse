@@ -33,9 +33,7 @@ const SearchBar = () => {
 					placeholder='Search by name'
 					onChange={handleChange}
 				/>
-				<label for='search by name' className={style.formLabel}>
-					Search by name
-				</label>
+				<label className={style.formLabel}>Search by name</label>
 			</div>
 			<div className={style.buttonsContainer}>
 				<button

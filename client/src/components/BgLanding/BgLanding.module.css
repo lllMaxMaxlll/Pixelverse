@@ -14,14 +14,14 @@
 	left: -10%;
 	width: 100%;
 	display: flex;
-	padding: 10px 0;
+	padding: 0 5px;
 	white-space: nowrap;
-	font-size: 64px;
+	font-size: 5rem;
 	transform: rotate(30deg);
 }
 
 .icons div svg {
-	color: rgba(0, 0, 0, 0.5);
+	color: rgba(0, 0, 0, 0.2);
 	padding: 0 5px;
 	transition: all 1s;
 	user-select: none;
@@ -41,13 +41,13 @@
 }
 
 .container .icons div {
-	animation: animate1 80s linear infinite;
-	animation-delay: -80s;
+	animation: animate1 100s linear infinite;
+	animation-delay: -100s;
 }
 
 .container .icons div:nth-child(2) {
-	animation: animate2 80s linear infinite;
-	animation-delay: -40s;
+	animation: animate2 120s linear infinite;
+	animation-delay: -60s;
 }
 
 @keyframes animate1 {
@@ -68,13 +68,13 @@
 }
 
 .container .icons:nth-child(even) div {
-	animation: animate3 80s linear infinite;
-	animation-delay: -80s;
+	animation: animate3 120s linear infinite;
+	animation-delay: -120s;
 }
 
 .container .icons:nth-child(even) div:nth-child(2) {
-	animation: animate4 80s linear infinite;
-	animation-delay: -40s;
+	animation: animate4 120s linear infinite;
+	animation-delay: -60s;
 }
 
 @keyframes animate3 {

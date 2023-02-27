@@ -2,6 +2,7 @@
 	width: fit-content;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 .cardsContainer {
 	display: flex;
@@ -12,8 +13,28 @@
 }
 
 .buttonPag {
-	width: 100%;
+	min-width: 40%;
+	max-width: 70%;
 	display: flex;
-	justify-self: space-evenly;
+	justify-content: center;
 	align-items: center;
+}
+
+.buttonPag button {
+	font-size: 1rem;
+	margin: 0 0.5rem;
+	color: #ffffff;
+	border: 2px solid #ffffff;
+	padding: 8px 20px;
+	background: transparent;
+	transition: all ease 0.2s;
+}
+
+.buttonPag button:hover {
+	box-shadow: 2px 2px 15px #3e1f47;
+}
+
+.active {
+	box-shadow: 2px 2px 15px #065a60;
+	transform: scale(1.1);
 }
