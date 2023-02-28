@@ -30,6 +30,11 @@
 		-2px -2px 5px rgba(0, 0, 0, 0.5), 2px -2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.title:hover {
+	transform: scale(1.05);
+	transition: all ease-in-out 0.2s;
+}
+
 .cardSubtitle {
 	position: absolute;
 	color: transparent;

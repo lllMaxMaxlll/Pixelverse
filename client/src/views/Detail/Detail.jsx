@@ -34,9 +34,11 @@ const Detail = () => {
 						style={{
 							backgroundImage: `radial-gradient(circle, rgba(17,17,17,0.8) 0%, rgba(17,17,17,0.85) 50%,rgba(17,17,17,0.9) 100%), url(${game.background_image})`,
 						}}></div>
+					<div className={style.title}>
+						<h1>{game.name}</h1>
+					</div>
 					<div className={style.infoContainer}>
 						<div className={style.title}>
-							<h1>{game.name}</h1>
 							<p dangerouslySetInnerHTML={{ __html: game.description }} />
 						</div>
 						<div className={style.info}>
@@ -50,7 +52,7 @@ const Detail = () => {
 							<p>{game.platforms}</p>
 						</div>
 					</div>
-					<button onClick={() => navigate("/home")}>Go bacK!</button>
+					<button onClick={() => navigate(-1)}>Go bacK!</button>
 				</div>
 			)}
 		</div>
