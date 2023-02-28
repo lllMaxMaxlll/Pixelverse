@@ -100,7 +100,7 @@ export const loadDone = () => {
 
 // For unmount Detail ID
 export const cleanID = () => {
-	return { type: CLEAN_ID, payload: true };
+	return { type: CLEAN_ID };
 };
 
 // To filter videogames to genres

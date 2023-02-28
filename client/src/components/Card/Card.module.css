@@ -44,7 +44,7 @@
 }
 
 .card:hover {
-	background-color: #000000b6;
+	background-color: rgba(17, 17, 17, 0.7);
 }
 
 .card:hover .cardSubtitle {

@@ -25,16 +25,16 @@
 }
 
 .buttonsContainer button:disabled {
-	color: #7c7c7c;
-	border: 2px solid #7c7c7c;
+	color: #505050;
+	border: 2px solid #505050;
 }
 
 .buttonsContainer button:hover {
-	box-shadow: 2px 2px 15px #065a60;
+	box-shadow: 0 0 15px #065a60;
 }
 
 .buttonsContainer button:active {
-	box-shadow: 2px 2px 20px #3e1f47;
+	box-shadow: 0 0 20px #3e1f47;
 	transform: scale(0.95);
 }
 

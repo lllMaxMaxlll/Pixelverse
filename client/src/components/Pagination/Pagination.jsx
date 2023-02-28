@@ -10,10 +10,6 @@ const Pagination = ({ videogames }) => {
 	// Calculate total of pages
 	const totalPages = Math.ceil(videogames.length / itemsPerPage);
 
-	const active = {
-		color: "red",
-	};
-
 	const getPageNumbers = (totalPages, currentPage) => {
 		const pageNumbers = [];
 		for (let i = 1; i <= totalPages; i++) {

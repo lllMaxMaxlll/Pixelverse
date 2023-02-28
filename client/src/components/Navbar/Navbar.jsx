@@ -1,14 +1,18 @@
 import style from "./Navbar.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { Pixelheart } from "../../views/Landing/Pixelheart";
 
 const Navbar = () => {
+	// Change name logo to white in detail page!
+	const location = useLocation();
+	// const logoColor = location.pathname.includes()
+
 	return (
-		<div className={style.nav}>
+		<header className={style.nav}>
 			<div className={style.logoContainer}>
 				<Pixelheart color={"#4d194d"} width={"35px"} />
 				<NavLink to={"/home"}>
-					<h1 className={style.logoName}>PIXELVERSE</h1>
+					<h1 className={style.logoNameColor}>PIXELVERSE</h1>
 				</NavLink>
 			</div>
 			<div>
@@ -29,7 +33,7 @@ const Navbar = () => {
 						</button>
 					</NavLink> */}
 			</div>
-		</div>
+		</header>
 	);
 };
 

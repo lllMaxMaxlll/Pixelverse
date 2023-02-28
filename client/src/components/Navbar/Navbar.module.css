@@ -7,6 +7,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	/* background-color: #111; */
+	z-index: 500;
 }
 
 .logoContainer {
@@ -25,18 +27,18 @@
 	margin-left: 1rem;
 }
 
-.logoName {
+.logoNameColor {
 	font-family: "Silkscreen", cursive;
+	font-size: 1.5rem;
 	background: linear-gradient(34deg, #006466, #144552, #212f45, #312244, #4d194d);
 	background-size: 100% 10%;
-	-webkit-animation: animagradient 3s ease infinite;
-	animation: animagradient 3s ease infinite;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	color: #e1e1e1;
 }
 
-.logoName:hover {
+.logoNameColor:hover {
 	background: linear-gradient(45deg, #4d194d, #312244, #212f45, #144552, #006466);
 	background-clip: text;
 	-webkit-background-clip: text;

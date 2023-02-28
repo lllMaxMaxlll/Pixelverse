@@ -15,8 +15,6 @@ const Detail = () => {
 	// Get info from store
 	const game = useSelector((state) => state.videogameDetail);
 
-	console.log(game);
-
 	useEffect(() => {
 		dispatch(getDetail(id)).then(() => setLoading(false));
 		return () => {
@@ -31,13 +29,27 @@ const Detail = () => {
 				<Loader />
 			) : (
 				<div className={style.detail}>
-					<h1>{game.name}</h1>
-					<img src={game.background_image} alt={game.name} />
-					<p dangerouslySetInnerHTML={{ __html: game.description }} />
-					<p>{game.released}</p>
-					<p>{game.rating}</p>
-					<p>{game.genres}</p>
-					<p>{game.platforms}</p>
+					<div
+						className={style.background}
+						style={{
+							backgroundImage: `radial-gradient(circle, rgba(17,17,17,0.8) 0%, rgba(17,17,17,0.85) 50%,rgba(17,17,17,0.9) 100%), url(${game.background_image})`,
+						}}></div>
+					<div className={style.infoContainer}>
+						<div className={style.title}>
+							<h1>{game.name}</h1>
+							<p dangerouslySetInnerHTML={{ __html: game.description }} />
+						</div>
+						<div className={style.info}>
+							<span>Released:</span>
+							<p>{game.released}</p>
+							<span>Rating:</span>
+							<p>{game.rating}</p>
+							<span>Genres:</span>
+							<p>{game.genres}</p>
+							<span>Platforms:</span>
+							<p>{game.platforms}</p>
+						</div>
+					</div>
 					<button onClick={() => navigate("/home")}>Go bacK!</button>
 				</div>
 			)}
