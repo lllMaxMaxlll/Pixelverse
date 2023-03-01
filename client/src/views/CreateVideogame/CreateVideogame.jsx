@@ -97,8 +97,10 @@ const CreateVideogame = () => {
 			<h1>CreateVideogame</h1>
 			<form onSubmit={submitHandler}>
 				{errors.name && <span>{errors.name}</span>}
-				<label>Name:</label>
+				<br />
+				<label className={style.formLabel}>Name:</label>
 				<input
+					className={style.formField}
 					type='text'
 					onChange={handleChange}
 					name='name'
@@ -106,8 +108,10 @@ const CreateVideogame = () => {
 					minLength='3'
 					maxLength='20'
 				/>
+
 				{errors.description && <span>{errors.description}</span>}
-				<label>Description:</label>
+				<br />
+				<label className={style.formLabel}>Description:</label>
 				<textarea
 					minLength='10'
 					maxLength='250'
@@ -117,17 +121,27 @@ const CreateVideogame = () => {
 					value={newVideogame.description}
 				/>
 				{errors.background_image && <span>{errors.background_image}</span>}
-				<label>Image URL:</label>
+				<br />
+				<label className={style.formLabel}>Image URL:</label>
 				<input
+					className={style.formField}
 					type='url'
 					onChange={handleChange}
 					name='background_image'
 					value={newVideogame.background_image}
 				/>
 				{errors.released && <span>{errors.released}</span>}
-				<label>Released date:</label>
-				<input type='date' onChange={handleChange} name='released' value={newVideogame.released} />
+				<br />
+				<label className={style.formLabel}>Released date:</label>
+				<input
+					type='date'
+					onChange={handleChange}
+					name='released'
+					value={newVideogame.released}
+					className={style.formField}
+				/>
 				{errors.genres && <span>{errors.genres}</span>}
+				<br />
 				<label>Genres:</label>
 				<Select
 					options={genresOptions}
@@ -146,8 +160,9 @@ const CreateVideogame = () => {
 					onChange={handlePlatforms}
 				/>
 				{errors.rating && <span>{errors.rating}</span>}
-				<label>Rating:</label>
+				<label className={style.formLabel}>Rating:</label>
 				<input
+					className={style.formField}
 					type='number'
 					id='rating'
 					name='rating'
