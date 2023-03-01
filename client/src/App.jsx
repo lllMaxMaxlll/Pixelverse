@@ -2,6 +2,9 @@ import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { Home, Landing, Detail, CreateVideogame } from "./views";
 import Navbar from "./components/Navbar/Navbar";
+import axios from "axios";
+
+axios.defaults.baseURL = "http://localhost:3001";
 
 const App = () => {
 	return (

@@ -1,7 +1,5 @@
 import axios from "axios";
 
-const URL = "http://localhost:3001";
-
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES";
 export const GET_VIDEOGAMES_BY_NAME = "GET_VIDEOGAMES_BY_NAME";
 export const GET_GENRES = "GET_GENRES";
@@ -23,7 +21,7 @@ export const getVideogames = () => {
 	return async (dispatch) => {
 		try {
 			// Get all
-			const apiData = await axios.get(`${URL}/videogames`);
+			const apiData = await axios.get("/videogames");
 			return dispatch({ type: GET_VIDEOGAMES, payload: apiData.data });
 		} catch (error) {
 			alert(error.response.data.error);
@@ -35,7 +33,7 @@ export const getVideogamesByName = (name) => {
 	return async (dispatch) => {
 		try {
 			// Search by name
-			const apiDataName = await axios.get(`${URL}/videogames?name=${name}`);
+			const apiDataName = await axios.get(`/videogames?name=${name}`);
 			return dispatch({ type: GET_VIDEOGAMES_BY_NAME, payload: apiDataName.data });
 		} catch (error) {
 			alert(error.response.data.error);
@@ -46,7 +44,7 @@ export const getVideogamesByName = (name) => {
 // Save genres from API to store
 export const getGenres = () => {
 	return async (dispatch) => {
-		const apiData = await axios.get(`${URL}/genres`);
+		const apiData = await axios.get("/genres");
 		const genres = apiData.data;
 		dispatch({ type: GET_GENRES, payload: genres });
 	};
@@ -55,7 +53,7 @@ export const getGenres = () => {
 // Save platforms from API to store
 export const getPlatforms = () => {
 	return async (dispatch) => {
-		const apiData = await axios.get(`${URL}/platforms`);
+		const apiData = await axios.get("/platforms");
 		const platforms = apiData.data;
 		dispatch({ type: GET_PLATFORMS, payload: platforms });
 	};
@@ -64,7 +62,7 @@ export const getPlatforms = () => {
 // Save videogame for ID from API to store
 export const getDetail = (id) => {
 	return async (dispatch) => {
-		const apiData = await axios.get(`${URL}/videogame/${id}`);
+		const apiData = await axios.get(`/videogame/${id}`);
 		const videogame = apiData.data;
 		// Convert array to string
 		videogame.genres = videogame.genres.map((g) => g.name).join(" - ");
@@ -77,7 +75,7 @@ export const getDetail = (id) => {
 export const postVideogame = (newGame) => {
 	return async () => {
 		await axios
-			.post(`${URL}/videogames`, newGame)
+			.post("/videogames", newGame)
 			.then((res) => alert(res.data))
 			.catch((err) => alert(err.response.data.error));
 	};
