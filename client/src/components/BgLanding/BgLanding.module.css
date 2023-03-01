@@ -10,7 +10,7 @@
 
 .container .icons {
 	position: relative;
-	top: -75%;
+	top: -70%;
 	left: -10%;
 	width: 100%;
 	display: flex;
@@ -42,12 +42,11 @@
 
 .container .icons div {
 	animation: animate1 100s linear infinite;
-	animation-delay: -100s;
 }
 
 .container .icons div:nth-child(2) {
-	animation: animate2 120s linear infinite;
-	animation-delay: -60s;
+	animation: animate2 100s linear infinite;
+	animation-delay: -50s;
 }
 
 @keyframes animate1 {
@@ -68,13 +67,12 @@
 }
 
 .container .icons:nth-child(even) div {
-	animation: animate3 120s linear infinite;
-	animation-delay: -120s;
+	animation: animate3 100s linear infinite;
+	animation-delay: -50s;
 }
 
 .container .icons:nth-child(even) div:nth-child(2) {
-	animation: animate4 120s linear infinite;
-	animation-delay: -60s;
+	animation: animate4 100s linear infinite;
 }
 
 @keyframes animate3 {

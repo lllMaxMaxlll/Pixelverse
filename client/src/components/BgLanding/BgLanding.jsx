@@ -64,44 +64,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -178,44 +142,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -292,44 +220,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -406,44 +298,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -520,44 +376,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -634,44 +454,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -748,44 +532,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -862,44 +610,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -976,44 +688,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1090,44 +766,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1204,44 +844,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1318,44 +922,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1432,44 +1000,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1546,44 +1078,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1660,44 +1156,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1774,44 +1234,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -1888,44 +1312,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -2002,44 +1390,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -2116,44 +1468,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
@@ -2230,500 +1546,8 @@ export const BgLanding = () => {
 					<RiXboxLine />
 					<SiPlaystationvita />
 					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 				</div>
 				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-			</div>
-			<div className={style.icons}>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-			</div>
-			<div className={style.icons}>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-			</div>
-			<div className={style.icons}>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-			</div>
-			<div className={style.icons}>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
-				</div>
-				<div>
-					<GiBulletBill />
-					<SiPlaystation />
-					<SiWindows />
-					<GiPortal />
-					<SiPlaystation3 />
-					<SiXbox />
-					<MdOutlineVideogameAsset />
-					<SiPlaystation2 />
-					<RiGameLine />
-					<SiNintendo3Ds />
-					<MdOutlineGamepad />
-					<SiPlaystation4 />
-					<SiEpicgames />
-					<SiNintendoswitch />
-					<GiCrosshair />
-					<RiXboxLine />
-					<SiPlaystationvita />
-					<SiNintendogamecube />
 					<GiBulletBill />
 					<SiPlaystation />
 					<SiWindows />
