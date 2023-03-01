@@ -35,6 +35,11 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.logoNameWhite {
+	font-family: "Silkscreen", cursive;
+	font-size: 1.5rem;
 	color: #e1e1e1;
 }
 

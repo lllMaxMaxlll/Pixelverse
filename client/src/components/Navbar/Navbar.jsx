@@ -5,14 +5,17 @@ import { Pixelheart } from "../../views/Landing/Pixelheart";
 const Navbar = () => {
 	// Change name logo to white in detail page!
 	const location = useLocation();
-	// const logoColor = location.pathname.includes()
+	const logoNameColor = location.pathname.includes("/detail")
+		? style.logoNameWhite
+		: style.logoNameColor;
+	const logoColor = location.pathname.includes("/detail") ? "#e1e1e1" : "#4d194d";
 
 	return (
 		<header className={style.nav}>
 			<div className={style.logoContainer}>
-				<Pixelheart color={"#4d194d"} width={"35px"} />
+				<Pixelheart color={logoColor} width={"35px"} />
 				<NavLink to={"/home"}>
-					<h1 className={style.logoNameColor}>PIXELVERSE</h1>
+					<h1 className={logoNameColor}>PIXELVERSE</h1>
 				</NavLink>
 			</div>
 			<div>

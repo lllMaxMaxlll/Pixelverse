@@ -45,6 +45,11 @@
 	transform: scale(1.05);
 }
 
+.detail button:active {
+	box-shadow: 0 0 20px #3e1f47;
+	transform: scale(0.95);
+}
+
 .title h1 {
 	position: relative;
 	font-size: 3rem;
