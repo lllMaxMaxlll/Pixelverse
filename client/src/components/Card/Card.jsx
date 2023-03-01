@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { deleteGame } from "../../redux/actions";
 import style from "./Card.module.css";
+import { RxCrossCircled } from "react-icons/rx";
 
 const Card = (props) => {
 	const dispatch = useDispatch();
@@ -24,7 +25,11 @@ const Card = (props) => {
 				))}
 			</div>
 			<img src={props.background_image} alt='bg-game' className={style.cardImg} />
-			{props.created && <button onClick={() => onClose(props.id)}>X</button>}
+			{props.created && (
+				<button className={style.buttonClose} onClick={() => onClose(props.id)}>
+					<RxCrossCircled />
+				</button>
+			)}
 		</div>
 	);
 };

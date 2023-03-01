@@ -96,79 +96,99 @@ const CreateVideogame = () => {
 		<div className={style.container}>
 			<h1>CreateVideogame</h1>
 			<form onSubmit={submitHandler}>
-				{errors.name && <span>{errors.name}</span>}
-				<br />
-				<label className={style.formLabel}>Name:</label>
-				<input
-					className={style.formField}
-					type='text'
-					onChange={handleChange}
-					name='name'
-					value={newVideogame.name}
-					minLength='3'
-					maxLength='20'
-				/>
+				<div className={style.inputContainer}>
+					<label className={style.formLabel}>Name:</label>
+					<input
+						className={style.formField}
+						type='text'
+						onChange={handleChange}
+						name='name'
+						value={newVideogame.name}
+						minLength='3'
+						maxLength='20'
+					/>
+					{errors.name && <span className={style.spanDanger}>{errors.name}</span>}
+				</div>
 
-				{errors.description && <span>{errors.description}</span>}
-				<br />
-				<label className={style.formLabel}>Description:</label>
-				<textarea
-					minLength='10'
-					maxLength='250'
-					type='text'
-					onChange={handleChange}
-					name='description'
-					value={newVideogame.description}
-				/>
-				{errors.background_image && <span>{errors.background_image}</span>}
-				<br />
-				<label className={style.formLabel}>Image URL:</label>
-				<input
-					className={style.formField}
-					type='url'
-					onChange={handleChange}
-					name='background_image'
-					value={newVideogame.background_image}
-				/>
-				{errors.released && <span>{errors.released}</span>}
-				<br />
-				<label className={style.formLabel}>Released date:</label>
-				<input
-					type='date'
-					onChange={handleChange}
-					name='released'
-					value={newVideogame.released}
-					className={style.formField}
-				/>
-				{errors.genres && <span>{errors.genres}</span>}
-				<br />
-				<label>Genres:</label>
-				<Select
-					options={genresOptions}
-					isMulti
-					closeMenuOnSelect={false}
-					name='genres'
-					onChange={handleGenres}
-				/>
-				{errors.platforms && <span>{errors.platforms}</span>}
-				<label>Platforms:</label>
-				<Select
-					options={platformsOptions}
-					isMulti
-					closeMenuOnSelect={false}
-					name='platforms'
-					onChange={handlePlatforms}
-				/>
-				{errors.rating && <span>{errors.rating}</span>}
-				<label className={style.formLabel}>Rating:</label>
-				<input
-					className={style.formField}
-					type='number'
-					id='rating'
-					name='rating'
-					min='1'
-					max='5'
-					onChange={handleChange}></input>
+				<div className={style.inputContainer}>
+					<label className={style.formLabel}>Description:</label>
+					<textarea
+						minLength='10'
+						maxLength='250'
+						type='text'
+						onChange={handleChange}
+						name='description'
+						value={newVideogame.description}
+					/>
+					{errors.description && <span className={style.spanDanger}>{errors.description}</span>}
+				</div>
+
+				<div className={style.inputContainer}>
+					<label className={style.formLabel}>Image URL:</label>
+					<input
+						className={style.formField}
+						type='url'
+						onChange={handleChange}
+						name='background_image'
+						value={newVideogame.background_image}
+					/>
+					{errors.background_image && (
+						<span className={style.spanDanger}>{errors.background_image}</span>
+					)}
+
+					<div className={style.inputContainer}>
+						<label className={style.formLabel}>Released date:</label>
+						<input
+							type='date'
+							onChange={handleChange}
+							name='released'
+							value={newVideogame.released}
+							className={style.formField}
+						/>
+						{errors.released && <span className={style.spanDanger}>{errors.released}</span>}
+					</div>
+				</div>
+
+				<div className={style.inputContainer}>
+					<label className={style.formLabel}>Genres:</label>
+					<Select
+						options={genresOptions}
+						isMulti
+						closeMenuOnSelect={false}
+						name='genres'
+						onChange={handleGenres}
+					/>
+					{errors.genres && <span className={style.spanDanger}>{errors.genres}</span>}
+				</div>
+				<div className={style.inputContainer}>
+					<label className={style.formLabel}>Platforms:</label>
+					<Select
+						styles={{
+							control: (baseStyles, state) => ({
+								...baseStyles,
+								borderColor: state.isFocused ? "grey" : "red",
+							}),
+						}}
+						options={platformsOptions}
+						isMulti
+						closeMenuOnSelect={false}
+						name='platforms'
+						onChange={handlePlatforms}
+					/>
+					{errors.platforms && <span className={style.spanDanger}>{errors.platforms}</span>}
+				</div>
+				<div className={style.inputContainer + " " + style.inputRating}>
+					<label className={style.formLabel}>Rating:</label>
+					<input
+						className={style.formField + " " + style.formNumber}
+						type='number'
+						id='rating'
+						name='rating'
+						min='1'
+						max='5'
+						onChange={handleChange}></input>
+					{errors.rating && <span className={style.spanDanger}>{errors.rating}</span>}
+				</div>
 				<button type='submit' disabled={isValidForm}>
 					Submit
 				</button>

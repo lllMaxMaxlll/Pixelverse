@@ -52,7 +52,7 @@ const Detail = () => {
 							<p>{game.platforms}</p>
 						</div>
 					</div>
-					<button onClick={() => navigate(-1)}>Go bacK!</button>
+					<button onClick={() => navigate(-1)}>Go back!</button>
 				</div>
 			)}
 		</div>
