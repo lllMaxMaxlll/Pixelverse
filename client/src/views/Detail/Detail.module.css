@@ -5,7 +5,7 @@
 }
 
 .infoContainer {
-	margin: 1rem 3rem;
+	margin: 1rem 5rem;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 1fr;
