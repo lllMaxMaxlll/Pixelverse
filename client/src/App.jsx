@@ -4,7 +4,8 @@ import { Home, Landing, Detail, CreateVideogame } from "./views";
 import Navbar from "./components/Navbar/Navbar";
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3001";
+// axios.defaults.baseURL = "http://localhost:3001";
+axios.defaults.baseURL = "https://pixelverse-pi-videogames-production.up.railway.app";
 
 const App = () => {
 	return (
