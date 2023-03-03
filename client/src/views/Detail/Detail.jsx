@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
-import { getDetail, cleanID, deleteVideogameCreated } from "../../redux/actions";
+import { getDetail, cleanID, deleteVideogameCreated, deleteGame } from "../../redux/actions";
 import style from "./Detail.module.css";
 import Loader from "../../components/Loader/Loader";
-import { RxCrossCircled } from "react-icons/rx";
 
 const Detail = () => {
 	const { id } = useParams();
@@ -27,6 +26,7 @@ const Detail = () => {
 	// Delete only created game
 	const onClose = (id) => {
 		dispatch(deleteVideogameCreated(id));
+		dispatch(deleteGame(id));
 		// Redirect to home
 		navigate("/home");
 	};

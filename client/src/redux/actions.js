@@ -14,6 +14,7 @@ export const FILTER_CREATED = "FILTER_CREATED";
 export const ORDER_NAME = "ORDER_NAME";
 export const GET_PLATFORMS = "GET_PLATFORMS";
 export const DELETE_GAME = "DELETE_GAME";
+export const ADD_GAME = "ADD_GAME";
 export const ORDER_RATING = "ORDER_RATING";
 export const SET_PAGE = "SET_PAGE";
 
@@ -30,6 +31,7 @@ export const getVideogames = () => {
 	};
 };
 
+// Get videogames by name
 export const getVideogamesByName = (name) => {
 	return async (dispatch) => {
 		try {
@@ -87,6 +89,7 @@ export const postVideogame = (newGame) => {
 	};
 };
 
+// Delete from DB only videogame created
 export const deleteVideogameCreated = (id) => {
 	return async () => {
 		try {
@@ -137,9 +140,14 @@ export const orderRating = (order) => {
 	return { type: ORDER_RATING, payload: order };
 };
 
-// To delete game created
+// To delete game created from store
 export const deleteGame = (id) => {
 	return { type: DELETE_GAME, payload: id };
+};
+
+// To push game created to store
+export const addGame = (id) => {
+	return { type: ADD_GAME, payload: id };
 };
 
 // To set current page number

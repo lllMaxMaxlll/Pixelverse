@@ -37,7 +37,7 @@ const Pagination = ({ videogames }) => {
 	const currentVideogames = currentItems.map((game) => {
 		return (
 			<Card
-				key={game.id}
+				key={`${game.name} ${game.rating}`}
 				id={game.id}
 				name={game.name}
 				background_image={game.background_image}

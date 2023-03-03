@@ -15,6 +15,7 @@ import {
 	SHOW_ALL,
 	GET_VIDEOGAMES_BY_NAME,
 	SET_PAGE,
+	ADD_GAME,
 } from "./actions";
 
 const initialState = {
@@ -164,6 +165,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				...state,
 				allVideogames: filtered,
 				videogames: filtered,
+			};
+
+		case ADD_GAME:
+			state.allVideogames.unshift(payload);
+			return {
+				...state,
 			};
 
 		case SET_PAGE:

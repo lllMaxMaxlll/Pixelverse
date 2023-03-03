@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Select from "react-select";
-import { postVideogame, loading, loadDone, getVideogames } from "../../redux/actions";
+import { postVideogame, loading, loadDone, getVideogames, addGame } from "../../redux/actions";
 import { useDispatch, useSelector } from "react-redux";
 import style from "./CreateVideogame.module.css";
 import validate from "./validate";
@@ -77,17 +77,13 @@ const CreateVideogame = () => {
 		setNewVideogame({ ...newVideogame, platforms: selected });
 	};
 
-	const submitHandler = (event) => {
+	const submitHandler = async (event) => {
 		// Prevent a browser reload/refresh
 		event.preventDefault();
-		// Set loading logo
-		dispatch(loading());
-		// Post to url and when done, finish loader
-		dispatch(postVideogame(newVideogame)).then(() =>
-			dispatch(getVideogames()).then(() => {
-				dispatch(loadDone());
-			})
-		);
+		// Push game to store
+		dispatch(addGame(newVideogame));
+		// Post to url and alert result
+		await dispatch(postVideogame(newVideogame));
 		// Redirect to home
 		navigate("/home");
 	};
