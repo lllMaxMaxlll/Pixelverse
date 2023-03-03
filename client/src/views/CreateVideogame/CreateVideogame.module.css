@@ -5,6 +5,8 @@
 	justify-content: center;
 	color: #ffffff;
 	font-size: 1.2rem;
+	position: relative;
+	top: 5rem;
 }
 
 .container .inputContainer {
@@ -29,7 +31,8 @@
 	background-color: transparent;
 	border: solid 2px;
 	background-clip: linear-gradient(to right, #006466, #4d194d);
-	width: 400px;
+	min-width: 250px;
+	max-width: 400px;
 	height: 200px;
 	color: #fff;
 	font-size: 1rem;

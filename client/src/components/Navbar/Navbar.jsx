@@ -19,7 +19,8 @@ const Navbar = () => {
 	// Change navbar color in detail page!
 	const navbarColor = location.pathname.includes("detail") ? style.navDark : false;
 	// Hide searchbar in detail page!
-	const inHome = location.pathname.includes("/detail") ? false : true;
+	const inHome =
+		location.pathname.includes("/detail") || location.pathname.includes("/create") ? false : true;
 
 	// Hide navbar when scroll down
 	let prevScrollpos = window.pageYOffset;
@@ -55,10 +56,10 @@ const Navbar = () => {
 			<MdOutlineMenu className={style.menuBtn} onClick={() => handlerMenu()} />
 			<div className={`${style.menu} ${isOpen ? style.menuOpen : style.menuClosed}`} id='menu'>
 				<div>
-					<NavLink to={"/home"}>
+					<NavLink to={"/home"} onClick={() => handlerMenu()}>
 						<button className={style.buttons}>Home</button>
 					</NavLink>
-					<NavLink to={"/create"}>
+					<NavLink to={"/create"} onClick={() => handlerMenu()}>
 						<button className={style.buttons}>Create</button>
 					</NavLink>
 				</div>
