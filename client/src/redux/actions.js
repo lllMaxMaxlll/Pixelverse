@@ -62,32 +62,37 @@ export const getPlatforms = () => {
 // Save videogame for ID from API to store
 export const getDetail = (id) => {
 	return async (dispatch) => {
-		const apiData = await axios.get(`/videogame/${id}`);
-		const videogame = apiData.data;
-		// Convert array to string
-		videogame.genres = videogame.genres.map((g) => g.name).join(" - ");
-		videogame.platforms = videogame.platforms.map((p) => p.name).join(" - ");
-		dispatch({ type: GET_DETAIL, payload: videogame });
+		try {
+			const apiData = await axios.get(`/videogame/${id}`);
+			const videogame = apiData.data;
+			// Convert array to string
+			videogame.genres = videogame.genres.map((g) => g.name).join(" - ");
+			videogame.platforms = videogame.platforms.map((p) => p.name).join(" - ");
+			dispatch({ type: GET_DETAIL, payload: videogame });
+		} catch (error) {
+			alert(error.response.data.error);
+		}
 	};
 };
 
 // Post new game
 export const postVideogame = (newGame) => {
 	return async () => {
-		await axios
-			.post("/videogames", newGame)
-			.then((res) => alert(res.data))
-			.catch((err) => alert(err.response.data.error));
+		try {
+			await axios.post("/videogames", newGame).then((res) => alert(res.data));
+		} catch (error) {
+			alert(error.response.data.error);
+		}
 	};
 };
 
 export const deleteVideogameCreated = (id) => {
 	return async () => {
-		await axios
-			.delete(`/videogame/${id}`)
-			// .then((res) => alert(res))
-			.then((res) => console.log(res))
-			.catch((err) => alert(err.response.data.error));
+		try {
+			await axios.delete(`/videogame/${id}`).then((res) => alert(res.data));
+		} catch (error) {
+			alert(error.response.data.error);
+		}
 	};
 };
 

@@ -2,7 +2,7 @@ const { Videogame } = require("../../db");
 
 // Delete game with ID from DB
 const deleteID_DB = async (id) => {
-	const deletedGame = await Videogame.destroy({
+	await Videogame.destroy({
 		where: {
 			id,
 		},
