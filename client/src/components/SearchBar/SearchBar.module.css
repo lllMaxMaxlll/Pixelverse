@@ -23,17 +23,20 @@
 	background: transparent;
 	transition: all ease 0.2s;
 }
+.buttonsContainer button:enabled {
+	cursor: pointer;
+}
 
 .buttonsContainer button:disabled {
 	color: #505050;
 	border: 2px solid #505050;
 }
 
-.buttonsContainer button:hover {
+.buttonsContainer button:hover:enabled {
 	box-shadow: 0 0 15px #065a60;
 }
 
-.buttonsContainer button:active {
+.buttonsContainer button:active:enabled {
 	box-shadow: 0 0 20px #3e1f47;
 	transform: scale(0.95);
 }
@@ -65,7 +68,7 @@
 .formField:placeholder-shown ~ .formLabel {
 	font-size: 1.1rem;
 	cursor: text;
-	top: 20px;
+	top: 30px;
 }
 
 .formLabel {
