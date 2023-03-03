@@ -107,7 +107,9 @@ const CreateVideogame = () => {
 						minLength='3'
 						maxLength='20'
 					/>
-					{errors.name && <span className={style.spanDanger}>{errors.name}</span>}
+					{errors.name && (
+						<span className={`${style.spanDanger} ${style.spanDangerName}`}>{errors.name}</span>
+					)}
 				</div>
 
 				<div className={style.inputContainer}>
@@ -120,7 +122,11 @@ const CreateVideogame = () => {
 						name='description'
 						value={newVideogame.description}
 					/>
-					{errors.description && <span className={style.spanDanger}>{errors.description}</span>}
+					{errors.description && (
+						<span className={`${style.spanDanger} ${style.spanDangerDescription}`}>
+							{errors.description}
+						</span>
+					)}
 				</div>
 
 				<div className={style.inputContainer}>
@@ -135,18 +141,18 @@ const CreateVideogame = () => {
 					{errors.background_image && (
 						<span className={style.spanDanger}>{errors.background_image}</span>
 					)}
+				</div>
 
-					<div className={style.inputContainer}>
-						<label className={style.formLabel}>Released date:</label>
-						<input
-							type='date'
-							onChange={handleChange}
-							name='released'
-							value={newVideogame.released}
-							className={style.formField}
-						/>
-						{errors.released && <span className={style.spanDanger}>{errors.released}</span>}
-					</div>
+				<div className={style.inputContainer}>
+					<label className={style.formLabel}>Released date:</label>
+					<input
+						type='date'
+						onChange={handleChange}
+						name='released'
+						value={newVideogame.released}
+						className={style.formField}
+					/>
+					{errors.released && <span className={style.spanDanger}>{errors.released}</span>}
 				</div>
 
 				<div className={style.inputContainer}>
