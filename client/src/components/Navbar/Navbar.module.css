@@ -78,6 +78,7 @@
 .buttons:focus,
 .buttons:hover {
 	color: #fff;
+	text-shadow: 0 0 15px #4d194d;
 }
 
 .buttons:focus:after,
@@ -94,7 +95,7 @@
 	position: absolute;
 	width: 0%;
 	height: 2px;
-	background-color: #fff;
+	background-color: #006466;
 	transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
 	transition-duration: 400ms;
 	transition-property: width, left;
