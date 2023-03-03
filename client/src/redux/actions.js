@@ -81,6 +81,16 @@ export const postVideogame = (newGame) => {
 	};
 };
 
+export const deleteVideogameCreated = (id) => {
+	return async () => {
+		await axios
+			.delete(`/videogame/${id}`)
+			// .then((res) => alert(res))
+			.then((res) => console.log(res))
+			.catch((err) => alert(err.response.data.error));
+	};
+};
+
 // Restore all games from backup
 export const showAllGames = () => {
 	return { type: SHOW_ALL, payload: true };
