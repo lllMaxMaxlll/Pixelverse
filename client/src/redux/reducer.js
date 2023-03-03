@@ -14,6 +14,7 @@ import {
 	POST_GAME,
 	SHOW_ALL,
 	GET_VIDEOGAMES_BY_NAME,
+	SET_PAGE,
 } from "./actions";
 
 const initialState = {
@@ -24,6 +25,7 @@ const initialState = {
 	videogameDetail: [],
 	isLoading: true,
 	allPlatforms: [],
+	currentPage: 1,
 	// myFavorites: [],
 };
 
@@ -162,6 +164,12 @@ const rootReducer = (state = initialState, { type, payload }) => {
 				...state,
 				allVideogames: filtered,
 				videogames: filtered,
+			};
+
+		case SET_PAGE:
+			return {
+				...state,
+				currentPage: payload,
 			};
 
 		default:

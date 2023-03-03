@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrentPage } from "../../redux/actions";
 import Card from "../Card/Card";
 import style from "./Pagination.module.css";
 
 const Pagination = ({ videogames }) => {
 	// Local state for save current page
-	const [currentPage, setCurrentPage] = useState(1);
+	// const [currentPage, setCurrentPage] = useState(1);
+	const currentPage = useSelector((state) => state.currentPage);
+	const dispatch = useDispatch();
+
 	// Set limit of cards for page
 	const itemsPerPage = 15;
 	// Calculate total of pages
@@ -18,7 +22,7 @@ const Pagination = ({ videogames }) => {
 				className = style.active;
 			}
 			pageNumbers.push(
-				<button key={i} onClick={() => setCurrentPage(i)} className={className}>
+				<button key={i} onClick={() => dispatch(setCurrentPage(i))} className={className}>
 					{i}
 				</button>
 			);

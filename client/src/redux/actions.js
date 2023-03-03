@@ -15,6 +15,7 @@ export const ORDER_NAME = "ORDER_NAME";
 export const GET_PLATFORMS = "GET_PLATFORMS";
 export const DELETE_GAME = "DELETE_GAME";
 export const ORDER_RATING = "ORDER_RATING";
+export const SET_PAGE = "SET_PAGE";
 
 // Save videogames from API to store
 export const getVideogames = () => {
@@ -139,4 +140,9 @@ export const orderRating = (order) => {
 // To delete game created
 export const deleteGame = (id) => {
 	return { type: DELETE_GAME, payload: id };
+};
+
+// To set current page number
+export const setCurrentPage = (page) => {
+	return { type: SET_PAGE, payload: page };
 };
