@@ -101,7 +101,7 @@
 	transition-property: width, left;
 }
 
-.buttonMenu {
+.menuBtn {
 	display: none;
 }
 
@@ -136,4 +136,48 @@
 	.menu {
 		display: none;
 	}
+	.menuOpen {
+		position: absolute;
+		margin-right: 0;
+		display: flex;
+		justify-content: center;
+		right: 0rem;
+		top: 0rem;
+		background-color: #111;
+		height: 100vh;
+		width: 15rem;
+	}
+
+	.menuOpen > div {
+		display: flex;
+		flex-direction: column;
+		margin-top: 5rem;
+	}
+
+	.menuOpen div > a {
+		margin: 1rem;
+	}
+
+	.menuOpen div > a > button {
+		font-size: 1.5rem;
+	}
+
+	.menuBtn {
+		display: block;
+		margin-right: 1rem;
+		cursor: pointer;
+		font-size: 2rem;
+		z-index: 50;
+	}
+	.menuBtn:hover {
+		filter: drop-shadow(0 0 5px #144552);
+		transition: all 0.3s ease-in-out;
+	}
+	.menuBtn:active {
+		transform: scale(0.9);
+		transition: all 0.3s ease-in-out;
+	}
+}
+
+@media screen and (max-width: 600px) {
 }

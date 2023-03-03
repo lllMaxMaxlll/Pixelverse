@@ -111,8 +111,8 @@
 	.searchButton {
 		display: block;
 		position: absolute;
-		right: 2rem;
-		top: 2rem;
+		right: 0rem;
+		top: 2.1rem;
 	}
 
 	.buttonsContainer {

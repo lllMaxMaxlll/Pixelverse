@@ -35,14 +35,14 @@ const SearchBar = () => {
 					onChange={handleChange}
 				/>
 				<label className={style.formLabel}>Search by name</label>
+				<RiSearchLine
+					className={style.searchButton}
+					disabled={!text}
+					onClick={() => {
+						if (!text) handleSearch(text);
+					}}
+				/>
 			</div>
-			<RiSearchLine
-				className={style.searchButton}
-				disabled={!text}
-				onClick={() => {
-					if (!text) handleSearch(text);
-				}}
-			/>
 			<div className={style.buttonsContainer}>
 				<button
 					disabled={!text}

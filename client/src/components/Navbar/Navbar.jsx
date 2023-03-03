@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import style from "./Navbar.module.css";
 import { NavLink, useLocation } from "react-router-dom";
 import { Pixelheart } from "../../views/Landing/Pixelheart";
@@ -6,6 +7,10 @@ import { MdOutlineMenu } from "react-icons/md";
 
 const Navbar = () => {
 	const location = useLocation();
+
+	// State to responsive menu
+	const [isOpen, setIsOpen] = useState(false);
+
 	// Change name logo to white in detail page!
 	const logoNameColor = location.pathname.includes("/detail")
 		? style.logoNameWhite
@@ -28,8 +33,14 @@ const Navbar = () => {
 		location.pathname.includes("/detail") && prevScrollpos > 50 && currentScrollPos > 60
 			? (document.getElementById("navbar").style.backdropFilter = "blur(10px)")
 			: (document.getElementById("navbar").style.backdropFilter = "none");
+		// If scroll down, close menu responsive
+		prevScrollpos < currentScrollPos ? setIsOpen(false) : true;
 
 		prevScrollpos = currentScrollPos;
+	};
+
+	const handlerMenu = () => {
+		setIsOpen(!isOpen);
 	};
 
 	return (
@@ -41,15 +52,17 @@ const Navbar = () => {
 				</NavLink>
 			</div>
 			{inHome && <SearchBar />}
-			<div className={style.menu}>
-				<NavLink to={"/home"}>
-					<button className={style.buttons}>Home</button>
-				</NavLink>
-				<NavLink to={"/create"}>
-					<button className={style.buttons}>Create</button>
-				</NavLink>
+			<MdOutlineMenu className={style.menuBtn} onClick={() => handlerMenu()} />
+			<div className={`${style.menu} ${isOpen ? style.menuOpen : style.menuClosed}`} id='menu'>
+				<div>
+					<NavLink to={"/home"}>
+						<button className={style.buttons}>Home</button>
+					</NavLink>
+					<NavLink to={"/create"}>
+						<button className={style.buttons}>Create</button>
+					</NavLink>
+				</div>
 			</div>
-			<MdOutlineMenu className={style.buttonMenu} />
 		</header>
 	);
 };
