@@ -154,6 +154,20 @@ const CreateVideogame = () => {
 				<div className={style.inputContainer}>
 					<label className={style.formLabel}>Genres:</label>
 					<Select
+						className={style.select}
+						theme={(theme) => ({
+							...theme,
+							borderRadius: 0,
+							colors: {
+								...theme.colors,
+								primary25: "neutral5",
+								primary: "purple",
+							},
+						})}
+						styles={(style) => ({
+							...style,
+							backgroundColor: "black",
+						})}
 						options={genresOptions}
 						isMulti
 						closeMenuOnSelect={false}
@@ -165,12 +179,20 @@ const CreateVideogame = () => {
 				<div className={style.inputContainer}>
 					<label className={style.formLabel}>Platforms:</label>
 					<Select
-						styles={{
-							control: (baseStyles, state) => ({
-								...baseStyles,
-								borderColor: state.isFocused ? "grey" : "red",
-							}),
-						}}
+						className={style.select}
+						theme={(theme) => ({
+							...theme,
+							borderRadius: 0,
+							colors: {
+								...theme.colors,
+								primary25: "neutral5",
+								primary: "purple",
+							},
+						})}
+						styles={(style) => ({
+							...style,
+							backgroundColor: "black",
+						})}
 						options={platformsOptions}
 						isMulti
 						closeMenuOnSelect={false}

@@ -77,6 +77,11 @@
 	transform: scale(0.95);
 }
 
+.inputContainer .select div {
+	background-color: #111;
+	color: white;
+}
+
 .formGroup {
 	padding: 20px 0 0;
 	bottom: 15px;
