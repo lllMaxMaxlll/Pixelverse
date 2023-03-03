@@ -2,6 +2,7 @@ import style from "./Navbar.module.css";
 import { NavLink, useLocation } from "react-router-dom";
 import { Pixelheart } from "../../views/Landing/Pixelheart";
 import SearchBar from "../SearchBar/SearchBar";
+import { MdOutlineMenu } from "react-icons/md";
 
 const Navbar = () => {
 	const location = useLocation();
@@ -19,9 +20,17 @@ const Navbar = () => {
 	let prevScrollpos = window.pageYOffset;
 	window.onscroll = () => {
 		let currentScrollPos = window.pageYOffset;
+		// If scroll down hide navbar
+		// console.log(currentScrollPos);
+		console.log(prevScrollpos);
 		prevScrollpos > currentScrollPos
 			? (document.getElementById("navbar").style.top = "0")
 			: (document.getElementById("navbar").style.top = "-4.8rem");
+		// If scroll down and view detail, put blur to navbar
+		location.pathname.includes("/detail") && prevScrollpos > 50
+			? (document.getElementById("navbar").style.backdropFilter = "blur(10px)")
+			: (document.getElementById("navbar").style.backdropFilter = "none");
+
 		prevScrollpos = currentScrollPos;
 	};
 
@@ -43,15 +52,16 @@ const Navbar = () => {
 				</NavLink>
 				{/* <NavLink to={"/favorites"}>
 						<button
-							className={
-								location.pathname === "/favorites"
-									? style.active
-									: style.button
-							}>
-							Favorites
+            className={
+              location.pathname === "/favorites"
+              ? style.active
+              : style.button
+            }>
+            Favorites
 						</button>
 					</NavLink> */}
 			</div>
+			<MdOutlineMenu className={style.buttonMenu} />
 		</header>
 	);
 };

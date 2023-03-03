@@ -101,6 +101,10 @@
 	transition-property: width, left;
 }
 
+.buttonMenu {
+	display: none;
+}
+
 @keyframes animlogo {
 	0% {
 		fill: #4d194d;
@@ -122,5 +126,11 @@
 	}
 	100% {
 		fill: #4d194d;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.logoNameColor {
+		display: none;
 	}
 }
