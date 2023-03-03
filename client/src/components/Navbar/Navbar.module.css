@@ -9,6 +9,7 @@
 	align-items: center;
 	z-index: 1000;
 	background-color: #111;
+	transition: all 0.3s ease-in-out;
 }
 
 .navDark {
@@ -52,6 +53,10 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.menu {
+	margin-right: 2rem;
 }
 
 .buttons {

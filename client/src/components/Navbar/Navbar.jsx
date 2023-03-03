@@ -13,8 +13,16 @@ const Navbar = () => {
 	const navbarColor = location.pathname.includes("detail") ? style.navDark : false;
 	const inHome = location.pathname.includes("/detail") ? false : true;
 
+	let prevScrollpos = window.pageYOffset;
+	window.onscroll = () => {
+		let currentScrollPos = window.pageYOffset;
+		prevScrollpos > currentScrollPos
+			? (document.getElementById("navbar").style.top = "0")
+			: (document.getElementById("navbar").style.top = "-4.8rem");
+		prevScrollpos = currentScrollPos;
+	};
 	return (
-		<header className={`${style.nav} ${navbarColor}`}>
+		<header className={`${style.nav} ${navbarColor}`} id='navbar'>
 			<div className={style.logoContainer}>
 				<Pixelheart color={logoColor} width={"35px"} />
 				<NavLink to={"/home"}>
