@@ -18,3 +18,24 @@
 .selectors select:focus-visible {
 	outline: 0px solid #ffffff;
 }
+
+@media screen and (max-width: 900px) {
+	.selectors select {
+		font-size: 0.8rem;
+		padding: 2px 5px;
+	}
+	.selectors option {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.selectors {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.selectors select {
+		margin: 5px;
+	}
+}

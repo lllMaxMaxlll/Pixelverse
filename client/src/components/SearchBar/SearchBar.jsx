@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { showAllGames, getVideogamesByName } from "../../redux/actions";
 import style from "./SearchBar.module.css";
+import { RiSearchLine } from "react-icons/ri";
 
 const SearchBar = () => {
 	const [text, setText] = useState("");
@@ -35,6 +36,13 @@ const SearchBar = () => {
 				/>
 				<label className={style.formLabel}>Search by name</label>
 			</div>
+			<RiSearchLine
+				className={style.searchButton}
+				disabled={!text}
+				onClick={() => {
+					if (!text) handleSearch(text);
+				}}
+			/>
 			<div className={style.buttonsContainer}>
 				<button
 					disabled={!text}

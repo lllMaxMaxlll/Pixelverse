@@ -37,6 +37,7 @@
 		max-width: 80%;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 	.buttonPag button {
 		margin: 5px;

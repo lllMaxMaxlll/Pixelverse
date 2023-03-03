@@ -21,13 +21,11 @@ const Navbar = () => {
 	window.onscroll = () => {
 		let currentScrollPos = window.pageYOffset;
 		// If scroll down hide navbar
-		// console.log(currentScrollPos);
-		console.log(prevScrollpos);
 		prevScrollpos > currentScrollPos
 			? (document.getElementById("navbar").style.top = "0")
 			: (document.getElementById("navbar").style.top = "-4.8rem");
 		// If scroll down and view detail, put blur to navbar
-		location.pathname.includes("/detail") && prevScrollpos > 50
+		location.pathname.includes("/detail") && prevScrollpos > 50 && currentScrollPos > 60
 			? (document.getElementById("navbar").style.backdropFilter = "blur(10px)")
 			: (document.getElementById("navbar").style.backdropFilter = "none");
 
@@ -50,16 +48,6 @@ const Navbar = () => {
 				<NavLink to={"/create"}>
 					<button className={style.buttons}>Create</button>
 				</NavLink>
-				{/* <NavLink to={"/favorites"}>
-						<button
-            className={
-              location.pathname === "/favorites"
-              ? style.active
-              : style.button
-            }>
-            Favorites
-						</button>
-					</NavLink> */}
 			</div>
 			<MdOutlineMenu className={style.buttonMenu} />
 		</header>

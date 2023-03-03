@@ -97,3 +97,32 @@
 .formField:invalid {
 	box-shadow: none;
 }
+
+.searchButton {
+	display: none;
+}
+
+.searchButton:hover:enabled {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+	.searchButton {
+		display: block;
+		position: absolute;
+		right: 2rem;
+		top: 2rem;
+	}
+
+	.buttonsContainer {
+		display: none;
+	}
+	.formGroup {
+		margin-right: 2rem;
+	}
+
+	.formField {
+		width: 120px;
+	}
+}

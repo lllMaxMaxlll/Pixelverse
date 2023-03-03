@@ -1,6 +1,7 @@
 .container {
-	position: relative;
-	top: 200px;
+	position: fixed;
+	width: 100%;
+	top: 40%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,6 +27,30 @@
 .logo svg:nth-child(3) {
 	animation: pulse 1.11111s linear 0s infinite normal forwards running;
 	-webkit-animation: pulse 1.11111s linear 0s infinite normal forwards running;
+}
+
+@media screen and (max-width: 700px) {
+	.logo svg {
+		width: 96px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.logo svg {
+		width: 64px;
+	}
+	.logo svg {
+		padding: 5px;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.logo svg {
+		width: 48px;
+	}
+	.logo > * {
+		padding: 10px;
+	}
 }
 
 @-webkit-keyframes beat {
