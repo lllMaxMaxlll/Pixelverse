@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
-import { getDetail, cleanID } from "../../redux/actions";
+import { getDetail, cleanID, deleteVideogameCreated } from "../../redux/actions";
 import style from "./Detail.module.css";
 import Loader from "../../components/Loader/Loader";
+import { RxCrossCircled } from "react-icons/rx";
 
 const Detail = () => {
 	const { id } = useParams();
@@ -22,6 +23,11 @@ const Detail = () => {
 			dispatch(cleanID());
 		};
 	}, [id]);
+
+	// Delete only created game
+	const onClose = (id) => {
+		dispatch(deleteVideogameCreated(id));
+	};
 
 	return (
 		<div className={style.container}>
@@ -52,6 +58,7 @@ const Detail = () => {
 							<p>{game.platforms}</p>
 						</div>
 					</div>
+					{game.created && <button onClick={() => onClose(game.id)}>Delete game</button>}
 					<button onClick={() => navigate(-1)}>Go back!</button>
 				</div>
 			)}

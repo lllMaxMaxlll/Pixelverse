@@ -12,14 +12,6 @@
 	gap: 1rem;
 }
 
-.buttonPag {
-	min-width: 40%;
-	max-width: 70%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 .buttonPag button {
 	font-size: 1rem;
 	margin: 0 0.5rem;
@@ -27,6 +19,7 @@
 	border: 2px solid #ffffff;
 	padding: 8px 20px;
 	background: transparent;
+	cursor: pointer;
 	transition: all ease 0.2s;
 }
 
