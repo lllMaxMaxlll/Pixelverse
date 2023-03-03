@@ -28,6 +28,7 @@ const CreateVideogame = () => {
 		rating: "",
 		genres: [],
 		platforms: [],
+		created: true,
 	});
 
 	// Create values for genres input
