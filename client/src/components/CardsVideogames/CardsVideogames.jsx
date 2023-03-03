@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import { Filters } from "../Filters/Filters";
 import Pagination from "../Pagination/Pagination";
-import SearchBar from "../SearchBar/SearchBar";
 import style from "./CardsVideogames.module.css";
 
 const CardsVideogames = () => {
@@ -11,7 +10,6 @@ const CardsVideogames = () => {
 	return (
 		<div className={style.container}>
 			<div className={style.buttonContainer}>
-				<SearchBar />
 				<Filters />
 			</div>
 			<Pagination videogames={videogames} />

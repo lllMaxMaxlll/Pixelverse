@@ -4,15 +4,18 @@ import { Pixelheart } from "../../views/Landing/Pixelheart";
 import SearchBar from "../SearchBar/SearchBar";
 
 const Navbar = () => {
-	// Change name logo to white in detail page!
 	const location = useLocation();
+	// Change name logo to white in detail page!
 	const logoNameColor = location.pathname.includes("/detail")
 		? style.logoNameWhite
 		: style.logoNameColor;
 	const logoColor = location.pathname.includes("/detail") ? "#e1e1e1" : "#4d194d";
+	// Change navbar color in detail page!
 	const navbarColor = location.pathname.includes("detail") ? style.navDark : false;
+	// Hide searchbar in detail page!
 	const inHome = location.pathname.includes("/detail") ? false : true;
 
+	// Hide navbar when scroll down
 	let prevScrollpos = window.pageYOffset;
 	window.onscroll = () => {
 		let currentScrollPos = window.pageYOffset;
@@ -21,6 +24,7 @@ const Navbar = () => {
 			: (document.getElementById("navbar").style.top = "-4.8rem");
 		prevScrollpos = currentScrollPos;
 	};
+
 	return (
 		<header className={`${style.nav} ${navbarColor}`} id='navbar'>
 			<div className={style.logoContainer}>

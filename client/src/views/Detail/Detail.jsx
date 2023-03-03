@@ -27,6 +27,8 @@ const Detail = () => {
 	// Delete only created game
 	const onClose = (id) => {
 		dispatch(deleteVideogameCreated(id));
+		// Redirect to home
+		navigate("/home");
 	};
 
 	return (
