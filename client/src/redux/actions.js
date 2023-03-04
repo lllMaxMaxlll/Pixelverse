@@ -82,7 +82,8 @@ export const getDetail = (id) => {
 export const postVideogame = (newGame) => {
 	return async () => {
 		try {
-			await axios.post("/videogames", newGame).then((res) => alert(res.data));
+			const videogame = await axios.post("/videogames", newGame);
+			return videogame.data;
 		} catch (error) {
 			alert(error.response.data.error);
 		}
@@ -146,8 +147,9 @@ export const deleteGame = (id) => {
 };
 
 // To push game created to store
-export const addGame = (id) => {
-	return { type: ADD_GAME, payload: id };
+export const addGame = (game) => {
+	console.log("en el actions");
+	return { type: ADD_GAME, payload: game };
 };
 
 // To set current page number

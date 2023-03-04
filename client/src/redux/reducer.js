@@ -171,6 +171,7 @@ const rootReducer = (state = initialState, { type, payload }) => {
 			state.allVideogames.unshift(payload);
 			return {
 				...state,
+				videogames: [...state.allVideogames],
 			};
 
 		case SET_PAGE:

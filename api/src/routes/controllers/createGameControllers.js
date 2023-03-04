@@ -25,19 +25,28 @@ const createGame = async (
 	// Creating new game in DB
 	const newGame = await Videogame.create({ name, description, background_image, released, rating });
 
+	const allGenres = genres.map((e, i) => {
+		return { id: i, name: e };
+	});
+	const allPlatforms = platforms.map((e, i) => {
+		return { id: i, name: e };
+	});
+
 	// Create or find all genres from array and add to Game
-	genres.forEach(async (e) => {
+	await genres.forEach(async (e) => {
 		let newGenre = await Genre.findOne({ where: { name: e } });
 		if (!newGenre) newGenre = await Genre.create({ name: e });
 		await newGame.addGenre(newGenre);
 	});
 
 	// Same with platforms
-	platforms.forEach(async (e) => {
+	await platforms.forEach(async (e) => {
 		let newPlatform = await Platform.findOne({ where: { name: e } });
 		if (!newPlatform) newPlatform = await Platform.create({ name: e });
 		await newGame.addPlatform(newPlatform);
 	});
+
+	return { ...newGame.dataValues, genres: allGenres, platforms: allPlatforms };
 };
 
 module.exports = { createGame };
