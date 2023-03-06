@@ -6,13 +6,6 @@ import style from "./CreateVideogame.module.css";
 import validate from "./validate";
 import { useNavigate } from "react-router-dom";
 
-// Cuando hago el create, NO hago el dispatch del GetVideogames(),
-// Agrego el juego nuevo a los array del store
-// Pero tendria que usar el useEffect para que observe el array de juegos
-// Y que si nota algun cambio, vuelva a renderizar
-// PD: El post se hace igual solamente que no volvemos a pedir la info al servidor
-// por cuestion del tiempo de retraso
-
 const CreateVideogame = () => {
 	const dispatch = useDispatch();
 	const genres = useSelector((state) => state.allGenres);
@@ -81,10 +74,11 @@ const CreateVideogame = () => {
 	const submitHandler = async (event) => {
 		// Prevent a browser reload/refresh
 		event.preventDefault();
-		// Push game to store
-		dispatch(addGame(newVideogame));
 		// Post to url and alert result
-		await dispatch(postVideogame(newVideogame));
+		const videogameCreated = await dispatch(postVideogame(newVideogame));
+		console.log("FN del component Create", videogameCreated);
+		// Push game to store
+		dispatch(addGame(videogameCreated));
 		// Redirect to home
 		navigate("/home");
 	};

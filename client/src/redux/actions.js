@@ -83,6 +83,7 @@ export const postVideogame = (newGame) => {
 	return async () => {
 		try {
 			const videogame = await axios.post("/videogames", newGame);
+			alert("Game created");
 			return videogame.data;
 		} catch (error) {
 			alert(error.response.data.error);
