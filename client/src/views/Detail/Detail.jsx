@@ -25,10 +25,13 @@ const Detail = () => {
 
 	// Delete only created game
 	const onClose = (id) => {
-		dispatch(deleteVideogameCreated(id));
-		dispatch(deleteGame(id));
-		// Redirect to home
-		navigate("/home");
+		// Confirm windows to delete
+		if (window.confirm("Do you really want to delete it?")) {
+			dispatch(deleteVideogameCreated(id));
+			dispatch(deleteGame(id));
+			// Redirect to home
+			navigate("/home");
+		}
 	};
 
 	return (
