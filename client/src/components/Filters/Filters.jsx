@@ -1,7 +1,13 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import style from "./Filters.module.css";
-import { orderName, filterGenre, orderRating, filterCreated } from "../../redux/actions";
+import {
+	orderName,
+	filterGenre,
+	orderRating,
+	filterCreated,
+	setCurrentPage,
+} from "../../redux/actions";
 
 export const Filters = () => {
 	const allGenres = useSelector((state) => state.allGenres);
@@ -17,10 +23,12 @@ export const Filters = () => {
 
 	const handleFilterGenre = (e) => {
 		dispatch(filterGenre(e.target.value));
+		dispatch(setCurrentPage(1));
 	};
 
 	const handleFilterCreated = (e) => {
 		dispatch(filterCreated(e.target.value));
+		dispatch(setCurrentPage(1));
 	};
 
 	return (
