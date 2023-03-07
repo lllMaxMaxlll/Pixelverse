@@ -76,10 +76,12 @@ const CreateVideogame = () => {
 		event.preventDefault();
 		// Post to url and alert result
 		const videogameCreated = await dispatch(postVideogame(newVideogame));
-		// Push game to store
-		dispatch(addGame(videogameCreated));
-		// Redirect to home
-		navigate("/home");
+		// Push game to store if can create
+		if (videogameCreated) {
+			dispatch(addGame(videogameCreated));
+			// Redirect to home
+			navigate("/home");
+		}
 	};
 
 	return (
