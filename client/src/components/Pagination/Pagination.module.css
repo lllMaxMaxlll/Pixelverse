@@ -24,7 +24,7 @@
 }
 
 .buttonPag button:hover {
-	box-shadow: 2px 2px 15px #3e1f47;
+	box-shadow: 0 0 10px #3e1f47;
 }
 
 .buttonPag button:disabled {
@@ -32,7 +32,7 @@
 }
 
 .active {
-	box-shadow: 2px 2px 15px #065a60;
+	box-shadow: 0 0 10px #065a60;
 	transform: scale(1.1);
 }
 
