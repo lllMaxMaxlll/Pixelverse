@@ -40,6 +40,25 @@ const Pagination = ({ videogames }) => {
 		);
 	});
 
+	// If more one page, show it
+	const showPages =
+		totalPages > 1 ? (
+			<p>
+				Page {currentPage} of {totalPages}
+			</p>
+		) : (
+			false
+		);
+
+	// If no games in array, show h1
+	const showCards = currentVideogames.length ? (
+		<div className={style.cardsContainer}>{currentVideogames}</div>
+	) : (
+		<div className={style.nothingHere}>
+			<h1>Nothing here...</h1>
+		</div>
+	);
+
 	return (
 		<div className={style.container}>
 			{totalPages > 1 ? (
@@ -47,13 +66,7 @@ const Pagination = ({ videogames }) => {
 					<button onClick={prevPage} disabled={currentPage === 1}>
 						Prev
 					</button>
-					{totalPages > 1 ? (
-						<p>
-							Page {currentPage} of {totalPages}
-						</p>
-					) : (
-						false
-					)}
+					{showPages}
 					<button onClick={nextPage} disabled={currentPage === totalPages}>
 						Next
 					</button>
@@ -61,13 +74,7 @@ const Pagination = ({ videogames }) => {
 			) : (
 				false
 			)}
-			{currentVideogames.length ? (
-				<div className={style.cardsContainer}>{currentVideogames}</div>
-			) : (
-				<div className={style.nothingHere}>
-					<h1>Nothing here...</h1>
-				</div>
-			)}
+			{showCards}
 		</div>
 	);
 };
