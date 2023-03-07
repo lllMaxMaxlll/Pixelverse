@@ -149,7 +149,6 @@ export const deleteGame = (id) => {
 
 // To push game created to store
 export const addGame = (game) => {
-	console.log("en el actions");
 	return { type: ADD_GAME, payload: game };
 };
 

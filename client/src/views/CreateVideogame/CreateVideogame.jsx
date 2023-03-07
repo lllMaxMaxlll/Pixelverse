@@ -76,7 +76,6 @@ const CreateVideogame = () => {
 		event.preventDefault();
 		// Post to url and alert result
 		const videogameCreated = await dispatch(postVideogame(newVideogame));
-		console.log("FN del component Create", videogameCreated);
 		// Push game to store
 		dispatch(addGame(videogameCreated));
 		// Redirect to home
