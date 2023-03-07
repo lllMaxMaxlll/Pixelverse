@@ -102,9 +102,42 @@
 	display: none;
 }
 
-.searchButton:hover:enabled {
-	transform: scale(1.1);
-	cursor: pointer;
+.loader {
+	position: absolute;
+	left: -1.4rem;
+	top: 2rem;
+	border: 2px solid rgba(255, 255, 255);
+	border-left-color: transparent;
+	border-radius: 50%;
+}
+
+.loader {
+	position: absolute;
+
+	border: 2px solid rgba(255, 255, 255);
+	border-left-color: transparent;
+	width: 16px;
+	height: 16px;
+}
+
+.loader {
+	position: absolute;
+
+	border: 2px solid rgba(255, 255, 255);
+	border-left-color: transparent;
+	width: 16px;
+	height: 16px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -113,6 +146,14 @@
 		position: absolute;
 		right: 0rem;
 		top: 2.1rem;
+	}
+
+	.searchButton {
+		cursor: pointer;
+	}
+
+	.searchButton:hover {
+		transform: scale(1.1);
 	}
 
 	.buttonsContainer {

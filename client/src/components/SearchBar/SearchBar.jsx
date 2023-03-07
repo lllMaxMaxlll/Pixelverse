@@ -6,6 +6,7 @@ import { RiSearchLine } from "react-icons/ri";
 
 const SearchBar = () => {
 	const [text, setText] = useState("");
+	const [loading, setLoading] = useState(false);
 	const dispatch = useDispatch();
 
 	const handleChange = (event) => {
@@ -13,13 +14,15 @@ const SearchBar = () => {
 	};
 
 	const handleSearch = (text) => {
+		setLoading(true);
 		// If no name, recover all
-		if (text === undefined) {
+		if (text === undefined || !text) {
 			dispatch(showAllGames());
+			setLoading(false);
 			return;
 		}
 		// Dispatch with name from state
-		dispatch(getVideogamesByName(text));
+		dispatch(getVideogamesByName(text)).then(() => setLoading(false));
 		setText("");
 	};
 
@@ -35,12 +38,11 @@ const SearchBar = () => {
 					onChange={handleChange}
 				/>
 				<label className={style.formLabel}>Search by name</label>
+				{loading ? <div className={style.loader}></div> : false}
 				<RiSearchLine
 					className={style.searchButton}
 					disabled={!text}
-					onClick={() => {
-						if (!text) handleSearch(text);
-					}}
+					onClick={() => handleSearch(text)}
 				/>
 			</div>
 			<div className={style.buttonsContainer}>
