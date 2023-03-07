@@ -13,6 +13,17 @@
 	gap: 1rem;
 }
 
+.buttonPag {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttonPag p {
+	font-size: 1.2rem;
+	margin: 0 1rem;
+}
+
 .buttonPag button {
 	font-size: 1rem;
 	margin: 0 0.5rem;
@@ -29,12 +40,18 @@
 }
 
 .buttonPag button:disabled {
-	display: none;
+	visibility: hidden;
 }
 
 .active {
 	box-shadow: 0 0 10px #065a60;
 	transform: scale(1.1);
+}
+
+.nothingHere {
+	height: 70vh;
+	display: flex;
+	align-items: center;
 }
 
 @media screen and (max-width: 900px) {

@@ -23,24 +23,6 @@ const Pagination = ({ videogames }) => {
 		return videogames.slice(startIndex, endIndex);
 	};
 
-	// Render all pages buttons
-	const getPageNumbers = (totalPages) => {
-		const pageNumbers = [];
-		if (totalPages > 1) {
-			for (let i = 1; i <= totalPages; i++) {
-				pageNumbers.push(
-					<button
-						key={i}
-						onClick={() => dispatch(setCurrentPage(i))}
-						className={i === currentPage ? style.active : ""}>
-						{i}
-					</button>
-				);
-			}
-		}
-		return pageNumbers;
-	};
-
 	const currentPageData = getCurrentPageData();
 
 	// Render cards from currentPage
@@ -60,12 +42,18 @@ const Pagination = ({ videogames }) => {
 
 	return (
 		<div className={style.container}>
-			{getPageNumbers(totalPages).length ? (
+			{totalPages > 1 ? (
 				<div className={style.buttonPag}>
 					<button onClick={prevPage} disabled={currentPage === 1}>
 						Prev
 					</button>
-					{getPageNumbers(totalPages)}
+					{totalPages > 1 ? (
+						<p>
+							Page {currentPage} of {totalPages}
+						</p>
+					) : (
+						false
+					)}
 					<button onClick={nextPage} disabled={currentPage === totalPages}>
 						Next
 					</button>
@@ -73,7 +61,13 @@ const Pagination = ({ videogames }) => {
 			) : (
 				false
 			)}
-			<div className={style.cardsContainer}>{currentVideogames}</div>
+			{currentVideogames.length ? (
+				<div className={style.cardsContainer}>{currentVideogames}</div>
+			) : (
+				<div className={style.nothingHere}>
+					<h1>Nothing here...</h1>
+				</div>
+			)}
 		</div>
 	);
 };
