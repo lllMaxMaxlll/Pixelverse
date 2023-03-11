@@ -5,12 +5,11 @@
 	align-items: center;
 }
 .cardsContainer {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
 }
 
 .buttonPag {
@@ -54,6 +53,17 @@
 	align-items: center;
 }
 
+@media screen and (max-width: 1000px) {
+	.cardsContainer {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+}
+
 @media screen and (max-width: 900px) {
 	.buttonPag {
 		max-width: 80%;
@@ -64,5 +74,8 @@
 	.buttonPag button {
 		margin: 5px;
 		padding: 3px 10px;
+	}
+	.buttonPag p {
+		font-size: 1rem;
 	}
 }
